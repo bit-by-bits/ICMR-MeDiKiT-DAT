@@ -8,12 +8,22 @@ export const URLs = {
   },
   app: {
     base: "/app",
-    filters: "/app/filters",
-    queries: "/app/queries",
-    settings: "/app/settings"
+    home: "/app/home",
+    hospitalDataManagement: "/app/hospital-data-management",
+    tests: "/app/tests",
+    labs: "/app/labs",
+    registerPatient: "/app/register-patient",
+    patientConsultation: "/app/patient-consultation",
+    adminHelp: "/app/admin-help",
+    patientHelp: "/app/patient-help"
   },
   api: {
     base: "/api",
     inspect: "/api/inspect"
+  },
+  docs: {
+    base: "/docs",
+    introduction: "/docs/introduction",
+    installation: "/docs/installation"
   }
 };

@@ -16,7 +16,7 @@ const AuthLayout = ({ coverImage }: AuthLayoutProps) => {
 
   useEffect(() => {
     if (user) {
-      navigate(URLs.app.filters);
+      navigate(URLs.app.home);
     }
   }, [user, navigate]);
 

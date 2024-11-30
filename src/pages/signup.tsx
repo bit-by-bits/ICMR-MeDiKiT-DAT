@@ -28,7 +28,7 @@ const Signup = () => {
 
     try {
       signup(email, password, name);
-      navigate(URLs.app.filters);
+      navigate(URLs.app.home);
       console.log("Account created successfully");
     } catch (err) {
       setError("Failed to create account. Please try again.");

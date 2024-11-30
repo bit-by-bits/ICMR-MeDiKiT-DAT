@@ -7,7 +7,7 @@ const ModifyFiltersButton: React.FC = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(URLs.app.filters);
+    navigate(URLs.app.home);
   };
 
   return (
