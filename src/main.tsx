@@ -27,8 +27,8 @@ import Settings from "./pages/settings";
 import Home from "./pages/home";
 // import HospitalDataManagement from "./pages/hospital-data-management";
 // import Tests from "./pages/tests";
-// import Labs from "./pages/labs";
-// import RegisterPatient from "./pages/register-patient";
+import Labs from "./pages/labs";
+import RegisterPatient from "./pages/register-patient";
 // import PatientConsultation from "./pages/patient-consultation";
 // import AdminHelp from "./pages/admin-help";
 // import PatientHelp from "./pages/patient-help";
@@ -80,14 +80,14 @@ const createRoutes = () => [
       //   path: URLs.app.tests,
       //   element: <Tests />
       // },
-      // {
-      //   path: URLs.app.labs,
-      //   element: <Labs />
-      // },
-      // {
-      //   path: URLs.app.registerPatient,
-      //   element: <RegisterPatient />
-      // },
+      {
+        path: URLs.app.labs,
+        element: <Labs />
+      },
+      {
+        path: URLs.app.registerPatient,
+        element: <RegisterPatient />
+      },
       // {
       //   path: URLs.app.patientConsultation,
       //   element: <PatientConsultation />

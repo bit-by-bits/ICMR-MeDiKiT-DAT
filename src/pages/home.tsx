@@ -24,15 +24,15 @@ const Home = () => {
           variant="outline"
           className="px-6 py-3 border-primary text-primary hover:bg-primary/10"
         >
-          <Link to={URLs.app.settings}>Settings</Link>
+          <Link to={URLs.app.registerPatient}>Register Patient</Link>
         </Button>
       </div>
 
-      <div className="mt-6">
+      <footer className="mt-6">
         <p className="text-muted-foreground">
           Powered by ICMR MeDiKiT-DAT Team
         </p>
-      </div>
+      </footer>
     </div>
   );
 };
