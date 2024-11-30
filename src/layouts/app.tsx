@@ -130,7 +130,7 @@ const AppLayout = () => {
       path={linkData.link}
       label={linkData.text}
       description={linkData.description}
-      className="block p-2 hover:bg-muted rounded-md outline-none"
+      className="block p-2 hover:bg-muted rounded-md outline-none focus:ring-0"
     />
   );
 

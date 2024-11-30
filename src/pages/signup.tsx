@@ -9,17 +9,26 @@ export const description =
   "Signup page for the ICMR MeDiKiT-DAT app. Users can create an account by providing their name, email, and password.";
 
 const Signup = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: ""
+  });
   const [error, setError] = useState<string | null>(null);
 
   const { signup } = useAuth();
   const navigate = useNavigate();
 
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { id, value } = e.target;
+    setFormData(prevData => ({ ...prevData, [id]: value }));
+  };
+
   const handleSignup = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
+
+    const { name, email, password } = formData;
 
     if (!name) {
       setError("Name is required.");
@@ -27,7 +36,7 @@ const Signup = () => {
     }
 
     try {
-      signup(email, password, name);
+      await signup(email, password, name);
       navigate(URLs.app.home);
       console.log("Account created successfully");
     } catch (err) {
@@ -52,8 +61,8 @@ const Signup = () => {
           id="name"
           type="text"
           label="Name"
-          value={name}
-          onChange={e => setName(e.target.value)}
+          value={formData.name}
+          onChange={handleChange}
           placeholder="username"
           required
         />
@@ -61,8 +70,8 @@ const Signup = () => {
           id="email"
           type="email"
           label="Email"
-          value={email}
-          onChange={e => setEmail(e.target.value)}
+          value={formData.email}
+          onChange={handleChange}
           placeholder="m@example.com"
           required
         />
@@ -70,8 +79,8 @@ const Signup = () => {
           id="password"
           type="password"
           label="Password"
-          value={password}
-          onChange={e => setPassword(e.target.value)}
+          value={formData.password}
+          onChange={handleChange}
           required
         />
 

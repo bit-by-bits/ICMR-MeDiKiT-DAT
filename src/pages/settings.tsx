@@ -1,18 +1,16 @@
+import { useEffect } from "react";
+import { useSearchParams, Link, useNavigate } from "react-router-dom";
 import AdvancedSettings from "@/components/settings/advanced-settings";
 import GeneralSettings from "@/components/settings/general-settings";
 import SecuritySettings from "@/components/settings/security-settings";
 import { capitalizeWord } from "@/lib/utils";
-import { useEffect } from "react";
-import { useSearchParams, Link, useNavigate } from "react-router-dom";
+
+type Section = "general" | "security" | "advanced";
+
+const sections: Section[] = ["general", "security", "advanced"];
 
 export const description =
   "Settings page for the ICMR MeDiKiT-DAT app. Allows users to configure settings for the app.";
-
-const sections = {
-  GENERAL: "general",
-  SECURITY: "security",
-  ADVANCED: "advanced"
-};
 
 const Settings = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -20,30 +18,28 @@ const Settings = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!sectionParam) {
-      navigate("");
-    }
+    if (!sectionParam) navigate("");
   }, [sectionParam, navigate]);
 
-  const renderCards = () => {
-    switch (sectionParam || sections.GENERAL) {
-      case sections.GENERAL:
+  const renderSection = (section: Section) => {
+    switch (section) {
+      case "general":
         return <GeneralSettings />;
-      case sections.SECURITY:
+      case "security":
         return <SecuritySettings />;
-      case sections.ADVANCED:
+      case "advanced":
         return <AdvancedSettings />;
       default:
         return null;
     }
   };
 
-  const handleSectionChange = (section: string) => {
-    setSearchParams(section === sections.GENERAL ? {} : { section });
+  const updateSection = (section: Section) => {
+    setSearchParams(section === "general" ? {} : { section });
   };
 
-  const isActive = (section: string) =>
-    sectionParam === section || (!sectionParam && section === sections.GENERAL);
+  const isActive = (section: Section) =>
+    sectionParam === section || (!sectionParam && section === "general");
 
   return (
     <div className="grid flex-1 auto-rows-max gap-6">
@@ -52,19 +48,21 @@ const Settings = () => {
       </div>
       <div className="mx-auto grid w-full max-w-6xl items-start gap-6 md:grid-cols-[180px_1fr] lg:grid-cols-[250px_1fr]">
         <nav className="grid gap-4 text-sm text-muted-foreground">
-          {Object.values(sections).map(section => (
+          {sections.map(section => (
             <Link
               key={section}
               to={`?section=${section}`}
               className={isActive(section) ? "text-primary font-semibold" : ""}
-              onClick={() => handleSectionChange(section)}
+              onClick={() => updateSection(section)}
             >
               {capitalizeWord(section)}
             </Link>
           ))}
         </nav>
 
-        <div className="grid gap-6">{renderCards()}</div>
+        <div className="grid gap-6">
+          {renderSection((sectionParam as Section) || "general")}
+        </div>
       </div>
     </div>
   );

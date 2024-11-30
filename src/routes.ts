@@ -15,15 +15,10 @@ export const URLs = {
     registerPatient: "/app/register-patient",
     patientConsultation: "/app/patient-consultation",
     adminHelp: "/app/admin-help",
-    patientHelp: "/app/patient-help"
+    patientHelp: "/app/patient-help",
+    settings: "/app/settings"
   },
   api: {
-    base: "/api",
-    inspect: "/api/inspect"
-  },
-  docs: {
-    base: "/docs",
-    introduction: "/docs/introduction",
-    installation: "/docs/installation"
+    base: "/api"
   }
 };

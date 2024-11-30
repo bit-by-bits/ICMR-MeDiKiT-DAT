@@ -24,6 +24,14 @@ import UnavailablePage from "./pages/unavailabe";
 import Login from "./pages/login";
 import Signup from "./pages/signup";
 import Settings from "./pages/settings";
+import Home from "./pages/home";
+// import HospitalDataManagement from "./pages/hospital-data-management";
+// import Tests from "./pages/tests";
+// import Labs from "./pages/labs";
+// import RegisterPatient from "./pages/register-patient";
+// import PatientConsultation from "./pages/patient-consultation";
+// import AdminHelp from "./pages/admin-help";
+// import PatientHelp from "./pages/patient-help";
 
 const createRoutes = () => [
   {
@@ -50,7 +58,6 @@ const createRoutes = () => [
         path: URLs.auth.signUp,
         element: <Signup />
       },
-
       {
         path: "*",
         element: <UnavailablePage />
@@ -62,10 +69,41 @@ const createRoutes = () => [
     element: <AppLayout />,
     children: [
       {
+        path: URLs.app.home,
+        element: <Home />
+      },
+      // {
+      //   path: URLs.app.hospitalDataManagement,
+      //   element: <HospitalDataManagement />
+      // },
+      // {
+      //   path: URLs.app.tests,
+      //   element: <Tests />
+      // },
+      // {
+      //   path: URLs.app.labs,
+      //   element: <Labs />
+      // },
+      // {
+      //   path: URLs.app.registerPatient,
+      //   element: <RegisterPatient />
+      // },
+      // {
+      //   path: URLs.app.patientConsultation,
+      //   element: <PatientConsultation />
+      // },
+      // {
+      //   path: URLs.app.adminHelp,
+      //   element: <AdminHelp />
+      // },
+      // {
+      //   path: URLs.app.patientHelp,
+      //   element: <PatientHelp />
+      // },
+      {
         path: URLs.app.settings,
         element: <Settings />
       },
-
       {
         path: "*",
         element: <UnavailablePage />

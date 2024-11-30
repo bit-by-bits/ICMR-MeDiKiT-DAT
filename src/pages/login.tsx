@@ -27,10 +27,8 @@ const Login = () => {
         "https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png"
       );
       navigate(URLs.app.home);
-      console.log("Logged in successfully");
-    } catch (err) {
+    } catch {
       setError("Invalid credentials");
-      console.log((err as Error)?.message || "An unknown error occurred");
     }
   };
 
