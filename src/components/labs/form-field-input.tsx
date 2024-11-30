@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 
-interface FormInputFieldProps {
+interface FormFieldInputProps {
   name: string;
   label: string;
   placeholder: string;
@@ -16,12 +16,12 @@ interface FormInputFieldProps {
   form: any;
 }
 
-const FormInputField = ({
+const FormFieldInput = ({
   name,
   label,
   placeholder,
   form
-}: FormInputFieldProps) => (
+}: FormFieldInputProps) => (
   <FormField
     name={name}
     control={form.control}
@@ -41,4 +41,4 @@ const FormInputField = ({
   />
 );
 
-export default FormInputField;
+export default FormFieldInput;

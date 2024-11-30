@@ -3,7 +3,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
-import FormInputField from "@/components/labs/form-input-field";
+import FormFieldInput from "@/components/labs/form-field-input";
 import {
   Select,
   SelectContent,
@@ -11,6 +11,13 @@ import {
   SelectTrigger,
   SelectValue
 } from "@/components/ui/select";
+import {
+  FormField,
+  FormControl,
+  FormItem,
+  FormLabel,
+  FormMessage
+} from "@/components/ui/form";
 import states from "@/data/states.json";
 import districts from "@/data/districts.json";
 import { useState, useEffect } from "react";
@@ -74,80 +81,91 @@ const Labs = () => {
 
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-          <FormInputField
+          <FormFieldInput
             name="hospitalName"
             label="Hospital Name"
             placeholder="Enter Hospital Name"
             form={form}
           />
-          <FormInputField
+          <FormFieldInput
             name="laboratoryName"
             label="Laboratory Name"
             placeholder="Enter Laboratory Name"
             form={form}
           />
-
-          <div className="form-field">
-            <label htmlFor="state" className="block text-lg font-semibold">
-              State
-            </label>
-            <Select
-              value={selectedState}
-              onValueChange={(value: string) => {
-                setSelectedState(value);
-                form.setValue("state", value);
-              }}
-            >
-              <SelectTrigger>
-                <SelectValue placeholder="Select State" />
-              </SelectTrigger>
-              <SelectContent>
-                {states.map(state => (
-                  <SelectItem key={state} value={state}>
-                    {state}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          </div>
-
-          <div className="form-field">
-            <label htmlFor="district" className="block text-lg font-semibold">
-              District
-            </label>
-            <Select
-              value={form.getValues("district")}
-              onValueChange={(value: string) =>
-                form.setValue("district", value)
-              }
-              disabled={!selectedState}
-            >
-              <SelectTrigger>
-                <SelectValue
-                  placeholder={
-                    selectedState
-                      ? "Select District"
-                      : "Please select a state first"
-                  }
-                />
-              </SelectTrigger>
-              <SelectContent>
-                {districtOptions.length > 0 ? (
-                  districtOptions.map(district => (
-                    <SelectItem key={district} value={district}>
-                      {district}
-                    </SelectItem>
-                  ))
-                ) : (
-                  <SelectItem value="no-district" disabled>
-                    Please select a state first
-                  </SelectItem>
-                )}
-              </SelectContent>
-            </Select>
-          </div>
-
-          <FormInputField
+          <FormField
+            name="state"
+            control={form.control}
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>State</FormLabel>
+                <FormControl>
+                  <Select
+                    value={field.value}
+                    onValueChange={(value: string) => {
+                      setSelectedState(value);
+                      form.setValue("state", value);
+                    }}
+                  >
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select State" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {states.map(state => (
+                        <SelectItem key={state} value={state}>
+                          {state}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            name="district"
+            control={form.control}
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>District</FormLabel>
+                <FormControl>
+                  <Select
+                    value={field.value}
+                    onValueChange={(value: string) =>
+                      form.setValue("district", value)
+                    }
+                    disabled={!selectedState}
+                  >
+                    <SelectTrigger>
+                      <SelectValue
+                        placeholder={
+                          selectedState
+                            ? "Select District"
+                            : "Please select a state first"
+                        }
+                      />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {districtOptions.length > 0 ? (
+                        districtOptions.map(district => (
+                          <SelectItem key={district} value={district}>
+                            {district}
+                          </SelectItem>
+                        ))
+                      ) : (
+                        <SelectItem value="no-district" disabled>
+                          Please select a state first
+                        </SelectItem>
+                      )}
+                    </SelectContent>
+                  </Select>
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormFieldInput
             name="pin"
             label="Pin"
             placeholder="Enter Pin (6 digits)"
