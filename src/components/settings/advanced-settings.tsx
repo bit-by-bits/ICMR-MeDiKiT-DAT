@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/card";
 import { useTheme } from "@/context/ThemeContext/ThemeContextUser";
 import ThemeToggleButton from "./theme-toggle-button";
-import { capitalizeWord } from "@/lib/utils";
+import { capitalizeWord } from "@/utils/helpers";
 
 const AdvancedSettings: React.FC = () => {
   const { theme, setTheme } = useTheme();

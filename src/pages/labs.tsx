@@ -5,9 +5,9 @@ import FormFieldInput from "@/components/form/form-field-input";
 import FormFieldSelect from "@/components/form/form-field-select";
 import { labFormSchema } from "@/lib/schema";
 import { useState } from "react";
-import { labFormValues } from "@/lib/defaultValues";
+import { labFormValues } from "@/utils/defaultValues";
 import FormWrapper from "@/components/form/form-wrapper";
-import { useDistrictOptions, useStateOptions } from "@/lib/useOptions";
+import { useDistrictOptions, useStateOptions } from "@/utils/useOptions";
 
 type LabFormValues = z.infer<typeof labFormSchema>;
 

@@ -7,10 +7,10 @@ import FormFieldSelect from "@/components/form/form-field-select";
 import FormFieldDate from "@/components/form/form-field-date";
 import FormFieldFile from "@/components/form/form-field-file";
 import { addTestFormSchema } from "@/lib/schema";
-import { addTestFormValues } from "@/lib/defaultValues";
+import { addTestFormValues } from "@/utils/defaultValues";
 import testTypes from "@/data/test-types.json";
 import FormWrapper from "@/components/form/form-wrapper";
-import { useHospitalOptions, useLabOptions } from "@/lib/useOptions";
+import { useHospitalOptions, useLabOptions } from "@/utils/useOptions";
 
 type TestFormValues = z.infer<typeof addTestFormSchema>;
 

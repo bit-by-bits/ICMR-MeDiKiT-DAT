@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 import { useAuth } from "@/context/AuthContext/AuthContextUser";
 import Message from "./message";
 import InputField from "./input-field";
-import { isValidImageURL } from "@/lib/utils";
+import { isValidImageURL } from "@/utils/helpers";
 
 const GeneralSettings: React.FC = () => {
   const { user, updateUserInfo } = useAuth();

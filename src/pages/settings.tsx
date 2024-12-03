@@ -3,7 +3,7 @@ import { useSearchParams, Link, useNavigate } from "react-router-dom";
 import AdvancedSettings from "@/components/settings/advanced-settings";
 import GeneralSettings from "@/components/settings/general-settings";
 import SecuritySettings from "@/components/settings/security-settings";
-import { capitalizeWord } from "@/lib/utils";
+import { capitalizeWord } from "@/utils/helpers";
 
 type Section = "general" | "security" | "advanced";
 

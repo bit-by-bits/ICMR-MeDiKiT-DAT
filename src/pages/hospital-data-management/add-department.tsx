@@ -1,11 +1,11 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { addDepartmentFormSchema } from "@/lib/schema";
-import { addDepartmentFormValues } from "@/lib/defaultValues";
+import { addDepartmentFormValues } from "@/utils/defaultValues";
 import FormWrapper from "@/components/form/form-wrapper";
 import FormFieldInput from "@/components/form/form-field-input";
 import FormFieldSelect from "@/components/form/form-field-select";
-import { useHospitalOptions } from "@/lib/useOptions";
+import { useHospitalOptions } from "@/utils/useOptions";
 
 const AddDepartment = () => {
   const form = useForm({

@@ -2,12 +2,12 @@ import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { addDoctorFormSchema } from "@/lib/schema";
-import { addDoctorFormValues } from "@/lib/defaultValues";
+import { addDoctorFormValues } from "@/utils/defaultValues";
 import FormWrapper from "@/components/form/form-wrapper";
 import FormFieldInput from "@/components/form/form-field-input";
 import FormFieldSelect from "@/components/form/form-field-select";
 import { z } from "zod";
-import { useDepartmentOptions, useHospitalOptions } from "@/lib/useOptions";
+import { useDepartmentOptions, useHospitalOptions } from "@/utils/useOptions";
 
 type AddDoctorFormValues = z.infer<typeof addDoctorFormSchema>;
 

@@ -67,7 +67,8 @@ const sidebarLinks: SidebarLink[] = [
       {
         key: "tests",
         text: "Lab Tests",
-        description: "Add new lab test entries with relevant details and patient information to the system.",
+        description:
+          "Add new lab test entries with relevant details and patient information to the system.",
         link: URLs.app.tests
       },
       {
@@ -87,13 +88,15 @@ const sidebarLinks: SidebarLink[] = [
       {
         key: "add-hospital",
         text: "Add New Hospital",
-        description: "Add a new hospital to the system with relevant details and location information.",
+        description:
+          "Add a new hospital to the system with relevant details and location information.",
         link: URLs.app.hospitalDataManagement.addHospital
       },
       {
         key: "add-department",
         text: "Add Department",
-        description: "Add new departments associated with the hospitals to manage patient treatment.",
+        description:
+          "Add new departments associated with the hospitals to manage patient treatment.",
         link: URLs.app.hospitalDataManagement.addDepartment
       },
       {
@@ -106,13 +109,15 @@ const sidebarLinks: SidebarLink[] = [
       {
         key: "add-disease",
         text: "Add Disease",
-        description: "Add diseases to the hospital system with relevant details to maintain patient records.",
+        description:
+          "Add diseases to the hospital system with relevant details to maintain patient records.",
         link: URLs.app.hospitalDataManagement.addDisease
       },
       {
         key: "add-medicine",
         text: "Add Medicine",
-        description: "Add medicines with relevant details to the hospital system to maintain stock and usage.",
+        description:
+          "Add medicines with relevant details to the hospital system to maintain stock and usage.",
         link: URLs.app.hospitalDataManagement.addMedicine
       }
     ]
