@@ -1,0 +1,132 @@
+[
+  {
+    "doctorName": "Dr. Rajesh Kumar",
+    "hospitalName": "Apollo Hospital",
+    "departmentName": "Cardiology"
+  },
+  {
+    "doctorName": "Dr. Meena Sharma",
+    "hospitalName": "Apollo Hospital",
+    "departmentName": "Neurology"
+  },
+  {
+    "doctorName": "Dr. Ramesh Singh",
+    "hospitalName": "Apollo Hospital",
+    "departmentName": "Orthopedics"
+  },
+  {
+    "doctorName": "Dr. Suman Verma",
+    "hospitalName": "Fortis Healthcare",
+    "departmentName": "Cardiology"
+  },
+  {
+    "doctorName": "Dr. Anjali Rao",
+    "hospitalName": "Fortis Healthcare",
+    "departmentName": "Oncology"
+  },
+  {
+    "doctorName": "Dr. Sudhir Reddy",
+    "hospitalName": "AIIMS",
+    "departmentName": "Cardiology"
+  },
+  {
+    "doctorName": "Dr. Pooja Jain",
+    "hospitalName": "AIIMS",
+    "departmentName": "Orthopedics"
+  },
+  {
+    "doctorName": "Dr. Ravi Kapoor",
+    "hospitalName": "Max Super Speciality",
+    "departmentName": "Urology"
+  },
+  {
+    "doctorName": "Dr. Priya Mehta",
+    "hospitalName": "Medanta Medicity",
+    "departmentName": "Cardiology"
+  },
+  {
+    "doctorName": "Dr. Amit Kumar",
+    "hospitalName": "Medanta Medicity",
+    "departmentName": "Orthopedics"
+  },
+  {
+    "doctorName": "Dr. Kamal Verma",
+    "hospitalName": "Care Hospital",
+    "departmentName": "Trauma"
+  },
+  {
+    "doctorName": "Dr. Neha Rao",
+    "hospitalName": "Fortis La Femme",
+    "departmentName": "Gynecology"
+  },
+  {
+    "doctorName": "Dr. Ruchi Sharma",
+    "hospitalName": "Kokilaben Dhirubhai Ambani Hospital",
+    "departmentName": "Oncology"
+  },
+  {
+    "doctorName": "Dr. Arvind Kumar",
+    "hospitalName": "Kokilaben Dhirubhai Ambani Hospital",
+    "departmentName": "Neurology"
+  },
+  {
+    "doctorName": "Dr. Priyanka Gupta",
+    "hospitalName": "Sankara Nethralaya",
+    "departmentName": "Ophthalmology"
+  },
+  {
+    "doctorName": "Dr. Anil Mehta",
+    "hospitalName": "St. John's Medical College Hospital",
+    "departmentName": "Cardiology"
+  },
+  {
+    "doctorName": "Dr. Sandeep Kumar",
+    "hospitalName": "Sri Ramachandra Medical Center",
+    "departmentName": "Orthopedics"
+  },
+  {
+    "doctorName": "Dr. Nisha Patel",
+    "hospitalName": "Jaypee Hospital",
+    "departmentName": "Trauma"
+  },
+  {
+    "doctorName": "Dr. Manish Gupta",
+    "hospitalName": "Manipal Hospital",
+    "departmentName": "Cardiology"
+  },
+  {
+    "doctorName": "Dr. Sudha Narayan",
+    "hospitalName": "BLK Super Speciality Hospital",
+    "departmentName": "Neurology"
+  },
+  {
+    "doctorName": "Dr. Ramesh Kumar",
+    "hospitalName": "KIMS Hospitals",
+    "departmentName": "Cardiology"
+  },
+  {
+    "doctorName": "Dr. Surbhi Sharma",
+    "hospitalName": "Shree Harsha Hospital",
+    "departmentName": "Orthopedics"
+  },
+  {
+    "doctorName": "Dr. Satish Kumar",
+    "hospitalName": "Narayana Health",
+    "departmentName": "Plastic Surgery"
+  },
+  {
+    "doctorName": "Dr. Kiran Mehta",
+    "hospitalName": "Asian Institute of Medical Sciences",
+    "departmentName": "Cardiology"
+  },
+  {
+    "doctorName": "Dr. Rahul Chawla",
+    "hospitalName": "Ruby Hall Clinic",
+    "departmentName": "Plastic Surgery"
+  },
+  {
+    "doctorName": "Dr. Riya Sood",
+    "hospitalName": "The Indraprastha Apollo Hospital",
+    "departmentName": "Nephrology"
+  }
+]

@@ -33,3 +33,16 @@ export const addDoctorFormValues = createEmptyFormValues([
   "hospitalName",
   "departmentName"
 ]);
+
+export const addDiseaseFormValues = createEmptyFormValues([
+  "diseaseName",
+  "description",
+  "category"
+]);
+
+export const addMedicineFormValues = createEmptyFormValues([
+  "medicineName",
+  "hospitalName",
+  "departmentName",
+  "description"
+]);

@@ -1,10 +1,10 @@
-import { useForm } from "react-hook-form";
+import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { addDepartmentFormSchema } from "@/lib/schema";
 import { addDepartmentFormValues } from "@/lib/default-values";
+import FormWrapper from "@/components/form/form-wrapper";
 import FormFieldInput from "@/components/form/form-field-input";
 import FormFieldSelect from "@/components/form/form-field-select";
-import FormWrapper from "@/components/form/form-wrapper";
 import hospitals from "@/data/hospitals.json";
 
 const AddDepartment = () => {
@@ -13,7 +13,7 @@ const AddDepartment = () => {
     defaultValues: addDepartmentFormValues
   });
 
-  const onSubmit = (values: typeof addDepartmentFormValues) => {
+  const onSubmit: SubmitHandler<typeof addDepartmentFormValues> = values => {
     console.log(values);
   };
 

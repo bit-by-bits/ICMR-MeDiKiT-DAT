@@ -1,42 +1,84 @@
 [
   {
     "hospitalName": "Apollo Hospital",
-    "laboratoryName": "Apollo Diagnostics",
+    "laboratoryName": "Apollo Labs - Central Delhi",
     "state": "Delhi",
     "district": "Central Delhi",
     "pin": "110001"
   },
   {
+    "hospitalName": "Apollo Hospital",
+    "laboratoryName": "Apollo Labs - South Delhi",
+    "state": "Delhi",
+    "district": "South Delhi",
+    "pin": "110029"
+  },
+  {
     "hospitalName": "Fortis Healthcare",
-    "laboratoryName": "Fortis Lab",
+    "laboratoryName": "Fortis Diagnostic Center - Bangalore",
     "state": "Karnataka",
     "district": "Bangalore Urban",
     "pin": "560001"
   },
   {
+    "hospitalName": "Fortis Healthcare",
+    "laboratoryName": "Fortis Lab - Whitefield",
+    "state": "Karnataka",
+    "district": "Bangalore Urban",
+    "pin": "560066"
+  },
+  {
     "hospitalName": "AIIMS",
-    "laboratoryName": "AIIMS Lab",
+    "laboratoryName": "AIIMS Clinical Lab",
+    "state": "Delhi",
+    "district": "South Delhi",
+    "pin": "110029"
+  },
+  {
+    "hospitalName": "AIIMS",
+    "laboratoryName": "AIIMS Research Lab",
     "state": "Delhi",
     "district": "South Delhi",
     "pin": "110029"
   },
   {
     "hospitalName": "Max Super Speciality",
-    "laboratoryName": "Max Lab",
+    "laboratoryName": "Max Lab - Mumbai",
     "state": "Maharashtra",
     "district": "Mumbai City",
     "pin": "400001"
   },
   {
+    "hospitalName": "Max Super Speciality",
+    "laboratoryName": "Max Diagnostics - Andheri",
+    "state": "Maharashtra",
+    "district": "Mumbai Suburban",
+    "pin": "400053"
+  },
+  {
     "hospitalName": "Medanta Medicity",
-    "laboratoryName": "Medanta Labs",
+    "laboratoryName": "Medanta Lab - Gurugram",
+    "state": "Haryana",
+    "district": "Gurugram",
+    "pin": "122018"
+  },
+  {
+    "hospitalName": "Medanta Medicity",
+    "laboratoryName": "Medanta Pathology Lab",
     "state": "Haryana",
     "district": "Gurugram",
     "pin": "122018"
   },
   {
     "hospitalName": "Care Hospital",
-    "laboratoryName": "Care Diagnostics",
+    "laboratoryName": "Care Diagnostics - Hyderabad",
+    "state": "Telangana",
+    "district": "Hyderabad",
+    "pin": "500062"
+  },
+  {
+    "hospitalName": "Care Hospital",
+    "laboratoryName": "Care Lab - Ameerpet",
     "state": "Telangana",
     "district": "Hyderabad",
     "pin": "500062"
@@ -50,23 +92,163 @@
   },
   {
     "hospitalName": "Kokilaben Dhirubhai Ambani Hospital",
-    "laboratoryName": "Kokilaben Lab",
+    "laboratoryName": "Kokilaben Diagnostic Center",
     "state": "Maharashtra",
     "district": "Mumbai Suburban",
     "pin": "400053"
   },
   {
     "hospitalName": "Sankara Nethralaya",
-    "laboratoryName": "Sankara Nethralaya Lab",
+    "laboratoryName": "Sankara Eye Lab",
+    "state": "Tamil Nadu",
+    "district": "Chennai",
+    "pin": "600006"
+  },
+  {
+    "hospitalName": "Sankara Nethralaya",
+    "laboratoryName": "Sankara Research Lab",
     "state": "Tamil Nadu",
     "district": "Chennai",
     "pin": "600006"
   },
   {
     "hospitalName": "St. John's Medical College Hospital",
-    "laboratoryName": "St. John's Lab",
+    "laboratoryName": "St. John's Lab - Bangalore",
     "state": "Karnataka",
     "district": "Bangalore Urban",
     "pin": "560034"
+  },
+  {
+    "hospitalName": "St. John's Medical College Hospital",
+    "laboratoryName": "St. John's Diagnostics - Koramangala",
+    "state": "Karnataka",
+    "district": "Bangalore Urban",
+    "pin": "560034"
+  },
+  {
+    "hospitalName": "Sri Ramachandra Medical Center",
+    "laboratoryName": "Sri Ramachandra Labs",
+    "state": "Tamil Nadu",
+    "district": "Chennai",
+    "pin": "600116"
+  },
+  {
+    "hospitalName": "Sri Ramachandra Medical Center",
+    "laboratoryName": "Sri Ramachandra Diagnostic Lab",
+    "state": "Tamil Nadu",
+    "district": "Chennai",
+    "pin": "600116"
+  },
+  {
+    "hospitalName": "Jaypee Hospital",
+    "laboratoryName": "Jaypee Diagnostic Center",
+    "state": "Uttar Pradesh",
+    "district": "Noida",
+    "pin": "201307"
+  },
+  {
+    "hospitalName": "Jaypee Hospital",
+    "laboratoryName": "Jaypee Pathology Lab",
+    "state": "Uttar Pradesh",
+    "district": "Noida",
+    "pin": "201307"
+  },
+  {
+    "hospitalName": "Manipal Hospital",
+    "laboratoryName": "Manipal Diagnostics - Bangalore",
+    "state": "Karnataka",
+    "district": "Bangalore Urban",
+    "pin": "560038"
+  },
+  {
+    "hospitalName": "Manipal Hospital",
+    "laboratoryName": "Manipal Lab - Whitefield",
+    "state": "Karnataka",
+    "district": "Bangalore Urban",
+    "pin": "560066"
+  },
+  {
+    "hospitalName": "BLK Super Speciality Hospital",
+    "laboratoryName": "BLK Lab - Pusa Road",
+    "state": "Delhi",
+    "district": "Pusa Road",
+    "pin": "110005"
+  },
+  {
+    "hospitalName": "BLK Super Speciality Hospital",
+    "laboratoryName": "BLK Diagnostic Center",
+    "state": "Delhi",
+    "district": "Pusa Road",
+    "pin": "110005"
+  },
+  {
+    "hospitalName": "KIMS Hospitals",
+    "laboratoryName": "KIMS Lab - Hyderabad",
+    "state": "Telangana",
+    "district": "Hyderabad",
+    "pin": "500062"
+  },
+  {
+    "hospitalName": "Shree Harsha Hospital",
+    "laboratoryName": "Shree Harsha Lab",
+    "state": "Andhra Pradesh",
+    "district": "Visakhapatnam",
+    "pin": "530003"
+  },
+  {
+    "hospitalName": "Narayana Health",
+    "laboratoryName": "Narayana Diagnostic Center",
+    "state": "Karnataka",
+    "district": "Bangalore Urban",
+    "pin": "560011"
+  },
+  {
+    "hospitalName": "Narayana Health",
+    "laboratoryName": "Narayana Lab - Koramangala",
+    "state": "Karnataka",
+    "district": "Bangalore Urban",
+    "pin": "560034"
+  },
+  {
+    "hospitalName": "Asian Institute of Medical Sciences",
+    "laboratoryName": "Asian Medical Labs - Faridabad",
+    "state": "Haryana",
+    "district": "Faridabad",
+    "pin": "121001"
+  },
+  {
+    "hospitalName": "Asian Institute of Medical Sciences",
+    "laboratoryName": "Asian Diagnostics",
+    "state": "Haryana",
+    "district": "Faridabad",
+    "pin": "121001"
+  },
+  {
+    "hospitalName": "Ruby Hall Clinic",
+    "laboratoryName": "Ruby Lab - Pune",
+    "state": "Maharashtra",
+    "district": "Pune",
+    "pin": "411001"
+  },
+  {
+    "hospitalName": "Ruby Hall Clinic",
+    "laboratoryName": "Ruby Diagnostics - Pune",
+    "state": "Maharashtra",
+    "district": "Pune",
+    "pin": "411001"
+  },
+  {
+    "hospitalName": "The Indraprastha Apollo Hospital",
+    "laboratoryName": "Indraprastha Apollo Lab - Sarita Vihar",
+    "state": "Delhi",
+    "district": "Sarita Vihar",
+    "pin": "110076"
+  },
+  {
+    "hospitalName": "The Indraprastha Apollo Hospital",
+    "laboratoryName": "Indraprastha Diagnostics",
+    "state": "Delhi",
+    "district": "Sarita Vihar",
+    "pin": "110076"
   }
 ]

@@ -1,0 +1,107 @@
+[
+  {
+    "diseaseName": "Hypertension",
+    "description": "A condition in which the blood pressure in the arteries is consistently elevated. It is often referred to as a 'silent killer' as it can lead to severe health problems like heart disease and stroke.",
+    "category": "Cardiovascular"
+  },
+  {
+    "diseaseName": "Diabetes Mellitus",
+    "description": "A group of diseases that affect how the body processes blood sugar (glucose). Type 1 and Type 2 diabetes are the most common forms.",
+    "category": "Endocrine"
+  },
+  {
+    "diseaseName": "Asthma",
+    "description": "A respiratory condition that causes narrowing and inflammation of the airways, leading to difficulty breathing, wheezing, and coughing.",
+    "category": "Respiratory"
+  },
+  {
+    "diseaseName": "Osteoarthritis",
+    "description": "A degenerative joint disease characterized by the breakdown of cartilage in the joints, leading to pain, stiffness, and reduced mobility.",
+    "category": "Orthopedic"
+  },
+  {
+    "diseaseName": "Cancer",
+    "description": "A group of diseases involving abnormal cell growth with the potential to spread to other parts of the body. Types of cancer include breast cancer, lung cancer, and leukemia.",
+    "category": "Oncology"
+  },
+  {
+    "diseaseName": "Chronic Kidney Disease (CKD)",
+    "description": "A long-term condition where the kidneys do not function as effectively as they should, leading to a buildup of waste and fluid in the body.",
+    "category": "Nephrology"
+  },
+  {
+    "diseaseName": "Alzheimer's Disease",
+    "description": "A progressive neurological disorder that causes brain cells to degenerate and die, leading to memory loss, confusion, and changes in behavior.",
+    "category": "Neurology"
+  },
+  {
+    "diseaseName": "Tuberculosis",
+    "description": "A contagious bacterial infection that primarily affects the lungs but can spread to other parts of the body. Symptoms include a persistent cough, weight loss, and fatigue.",
+    "category": "Infectious Diseases"
+  },
+  {
+    "diseaseName": "Rheumatoid Arthritis",
+    "description": "An autoimmune disease that causes the body's immune system to attack the joints, leading to inflammation, pain, and potential joint deformity.",
+    "category": "Rheumatology"
+  },
+  {
+    "diseaseName": "Hepatitis B",
+    "description": "A viral infection that attacks the liver and can lead to both acute and chronic diseases. It is transmitted through contact with infected bodily fluids.",
+    "category": "Gastroenterology"
+  },
+  {
+    "diseaseName": "Epilepsy",
+    "description": "A neurological disorder characterized by recurring seizures caused by abnormal electrical activity in the brain.",
+    "category": "Neurology"
+  },
+  {
+    "diseaseName": "Cystic Fibrosis",
+    "description": "A genetic disorder that causes severe damage to the lungs and digestive system due to the production of thick, sticky mucus.",
+    "category": "Respiratory"
+  },
+  {
+    "diseaseName": "Multiple Sclerosis",
+    "description": "A disease where the immune system attacks the protective sheath (myelin) that covers nerve fibers, causing inflammation and damage to the nervous system.",
+    "category": "Neurology"
+  },
+  {
+    "diseaseName": "Stroke",
+    "description": "A medical emergency that occurs when the blood supply to part of the brain is interrupted, leading to brain damage and loss of function.",
+    "category": "Cardiovascular"
+  },
+  {
+    "diseaseName": "HIV/AIDS",
+    "description": "HIV (Human Immunodeficiency Virus) attacks the immune system, and if left untreated, it can lead to AIDS (Acquired Immunodeficiency Syndrome), a condition where the immune system is severely weakened.",
+    "category": "Infectious Diseases"
+  },
+  {
+    "diseaseName": "Anemia",
+    "description": "A condition where you lack enough healthy red blood cells to carry adequate oxygen to the body's tissues, leading to fatigue, weakness, and dizziness.",
+    "category": "Hematology"
+  },
+  {
+    "diseaseName": "Parkinson's Disease",
+    "description": "A neurodegenerative disorder that affects movement, causing tremors, stiffness, and difficulty with balance and coordination.",
+    "category": "Neurology"
+  },
+  {
+    "diseaseName": "Hepatitis C",
+    "description": "A viral infection that affects the liver, often leading to chronic liver disease, cirrhosis, and liver cancer if left untreated.",
+    "category": "Gastroenterology"
+  },
+  {
+    "diseaseName": "Psoriasis",
+    "description": "A chronic autoimmune disease that leads to the rapid growth of skin cells, causing scaling, redness, and inflammation.",
+    "category": "Dermatology"
+  },
+  {
+    "diseaseName": "Myocardial Infarction (Heart Attack)",
+    "description": "A blockage of blood flow to the heart muscle, resulting in damage or death of heart tissue.",
+    "category": "Cardiovascular"
+  },
+  {
+    "diseaseName": "Chronic Obstructive Pulmonary Disease (COPD)",
+    "description": "A group of lung diseases that cause airflow blockage and breathing problems, including emphysema and chronic bronchitis.",
+    "category": "Respiratory"
+  }
+]

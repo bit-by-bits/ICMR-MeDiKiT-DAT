@@ -1,24 +1,25 @@
 import { useState, useMemo } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import FormFieldInput from "@/components/form/form-field-input";
-import FormFieldSelect from "@/components/form/form-field-select";
-import FormWrapper from "@/components/form/form-wrapper";
 import { addHospitalFormSchema } from "@/lib/schema";
 import { addHospitalFormValues } from "@/lib/default-values";
+import { z } from "zod";
+import FormWrapper from "@/components/form/form-wrapper";
+import FormFieldInput from "@/components/form/form-field-input";
+import FormFieldSelect from "@/components/form/form-field-select";
 import states from "@/data/states.json";
 import districts from "@/data/districts.json";
 
 type AddHospitalFormValues = z.infer<typeof addHospitalFormSchema>;
 
-const useDistrictOptions = (selectedState: string) => {
-  return useMemo(() => {
-    return selectedState
-      ? districts[selectedState as keyof typeof districts] || []
-      : [];
-  }, [selectedState]);
-};
+const useDistrictOptions = (selectedState: string) =>
+  useMemo(
+    () =>
+      selectedState
+        ? districts[selectedState as keyof typeof districts] || []
+        : [],
+    [selectedState]
+  );
 
 const AddHospital = () => {
   const form = useForm<AddHospitalFormValues>({

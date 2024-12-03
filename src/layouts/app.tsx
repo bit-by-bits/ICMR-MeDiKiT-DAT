@@ -22,9 +22,9 @@ import {
 import {
   HomeIcon,
   UsersIcon,
-  FileTextIcon,
   HospitalIcon,
-  HelpCircleIcon
+  HelpCircleIcon,
+  SettingsIcon
 } from "lucide-react";
 
 interface SidebarLink {
@@ -53,25 +53,28 @@ const sidebarLinks: SidebarLink[] = [
   {
     key: "admin",
     text: "Admin",
-    icon: <FileTextIcon className="h-4 w-4" />, // Admin icon
+    icon: <SettingsIcon className="h-4 w-4" />,
+    description:
+      "Manage system-wide configurations, hospitals, tests, and more.",
     children: [
       {
         key: "hospital-data-management",
         text: "Hospital Data Management",
         description:
-          "Manage and add hospital-related data such as hospitals, departments, doctors, etc.",
+          "Manage and organize hospital-related data, including hospital records, departments, and medical professionals.",
         link: URLs.app.hospitalDataManagement.base
       },
       {
         key: "tests",
-        text: "Tests",
-        description: "Manage test data and configurations.",
+        text: "Tests Information",
+        description: "Add new and populate existing tests in the system.",
         link: URLs.app.tests
       },
       {
         key: "labs",
-        text: "Labs",
-        description: "View and edit information about laboratories.",
+        text: "Laboratories",
+        description:
+          "Add new laboratories and manage existing ones in the system.",
         link: URLs.app.labs
       }
     ]
@@ -79,36 +82,37 @@ const sidebarLinks: SidebarLink[] = [
   {
     key: "hospital",
     text: "Hospital",
-    icon: <HospitalIcon className="h-4 w-4" />, // New icon for Hospital
+    icon: <HospitalIcon className="h-4 w-4" />,
     children: [
       {
         key: "add-hospital",
-        text: "Add Hospital",
-        description: "Add new hospitals to the system.",
+        text: "Add New Hospital",
+        description: "Add a new hospital to the system with relevant details and location information.",
         link: URLs.app.hospitalDataManagement.addHospital
       },
       {
         key: "add-department",
         text: "Add Department",
-        description: "Add new departments to a hospital.",
+        description: "Add new departments associated with the hospitals to manage patient treatment.",
         link: URLs.app.hospitalDataManagement.addDepartment
       },
       {
         key: "add-doctor",
         text: "Add Doctor",
-        description: "Add new doctors to the system.",
+        description:
+          "Add new doctors to the hospital system associated with the departments to maintain doctor-patient records.",
         link: URLs.app.hospitalDataManagement.addDoctor
       },
       {
         key: "add-disease",
         text: "Add Disease",
-        description: "Add diseases to the system.",
+        description: "Add diseases to the hospital system with relevant details to maintain patient records.",
         link: URLs.app.hospitalDataManagement.addDisease
       },
       {
         key: "add-medicine",
         text: "Add Medicine",
-        description: "Add medicines to the hospital system.",
+        description: "Add medicines with relevant details to the hospital system to maintain stock and usage.",
         link: URLs.app.hospitalDataManagement.addMedicine
       }
     ]
@@ -120,14 +124,14 @@ const sidebarLinks: SidebarLink[] = [
     children: [
       {
         key: "register-patient",
-        text: "Register Patient",
-        description: "Add new patients to the system.",
+        text: "Register New Patient",
+        description: "Register and create new patient profiles in the system.",
         link: URLs.app.registerPatient
       },
       {
         key: "patient-consultation",
-        text: "Consultation",
-        description: "Record and manage patient consultations.",
+        text: "Patient Consultation",
+        description: "Manage patient consultations and treatment records.",
         link: URLs.app.patientConsultation
       }
     ]
@@ -139,14 +143,14 @@ const sidebarLinks: SidebarLink[] = [
     children: [
       {
         key: "admin-help",
-        text: "Admin",
-        description: "Guidance for administrators.",
+        text: "Admin Help",
+        description: "Guidelines and help resources for administrators.",
         link: URLs.app.adminHelp
       },
       {
         key: "patient-help",
-        text: "Patient",
-        description: "Help resources for patients.",
+        text: "Patient Help",
+        description: "Assistance and FAQs for patients.",
         link: URLs.app.patientHelp
       }
     ]
@@ -180,35 +184,37 @@ const AppLayout = () => {
           <ICMRLogo />
           <NavigationMenu>
             <NavigationMenuList>
-              {sidebarLinks.map(({ key, text, icon, link, children }) => (
-                <NavigationMenuItem key={key}>
-                  {children ? (
-                    <>
-                      <NavigationMenuTrigger className="border-none">
-                        <div className="flex items-center gap-2">
-                          {icon}
-                          <span>{text}</span>
-                        </div>
-                      </NavigationMenuTrigger>
-                      <NavigationMenuContent>
-                        <ul className="grid gap-3 p-4 md:w-[400px]">
-                          {children.map(child => (
-                            <li key={child.key}>
-                              <NavigationMenuLink asChild>
-                                {renderNavLink(child)}
-                              </NavigationMenuLink>
-                            </li>
-                          ))}
-                        </ul>
-                      </NavigationMenuContent>
-                    </>
-                  ) : (
-                    <NavigationMenuLink asChild>
-                      {renderNavLink({ key, text, link: link! })}
-                    </NavigationMenuLink>
-                  )}
-                </NavigationMenuItem>
-              ))}
+              {sidebarLinks.map(
+                ({ key, text, icon, link, children, description }) => (
+                  <NavigationMenuItem key={key}>
+                    {children ? (
+                      <>
+                        <NavigationMenuTrigger className="border-none">
+                          <div className="flex items-center gap-2">
+                            {icon}
+                            <span>{text}</span>
+                          </div>
+                        </NavigationMenuTrigger>
+                        <NavigationMenuContent>
+                          <ul className="grid gap-3 p-4 md:w-[400px]">
+                            {children.map(child => (
+                              <li key={child.key}>
+                                <NavigationMenuLink asChild>
+                                  {renderNavLink(child)}
+                                </NavigationMenuLink>
+                              </li>
+                            ))}
+                          </ul>
+                        </NavigationMenuContent>
+                      </>
+                    ) : (
+                      <NavigationMenuLink asChild>
+                        {renderNavLink({ key, text, link: link!, description })}
+                      </NavigationMenuLink>
+                    )}
+                  </NavigationMenuItem>
+                )
+              )}
             </NavigationMenuList>
           </NavigationMenu>
         </nav>

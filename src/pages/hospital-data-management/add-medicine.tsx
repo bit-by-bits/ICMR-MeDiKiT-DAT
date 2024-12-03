@@ -1,18 +1,19 @@
 import { useState, useMemo } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { addDoctorFormSchema } from "@/lib/schema";
-import { addDoctorFormValues } from "@/lib/default-values";
+import { addMedicineFormSchema } from "@/lib/schema";
+import { addMedicineFormValues } from "@/lib/default-values";
 import FormWrapper from "@/components/form/form-wrapper";
 import FormFieldInput from "@/components/form/form-field-input";
 import FormFieldSelect from "@/components/form/form-field-select";
+import FormFieldTextArea from "@/components/form/form-field-textarea";
 import hospitals from "@/data/hospitals.json";
 import departments from "@/data/departments.json";
 import { z } from "zod";
 
-type AddDoctorFormValues = z.infer<typeof addDoctorFormSchema>;
+type AddMedicineFormValues = z.infer<typeof addMedicineFormSchema>;
 
-const useDepartmentOptions = (selectedHospital: string) => {
+const useDepartmentOptions = (selectedHospital: string | boolean) => {
   return useMemo(() => {
     if (!selectedHospital) return [];
     return departments
@@ -24,28 +25,24 @@ const useDepartmentOptions = (selectedHospital: string) => {
   }, [selectedHospital]);
 };
 
-const useHospitalOptions = () => {
-  return useMemo(
-    () =>
-      hospitals.map(hospital => ({
-        value: hospital.hospitalName,
-        label: `${hospital.hospitalName} - ${hospital.state}, ${hospital.district}`
-      })),
-    []
-  );
-};
-
-const AddDoctor = () => {
-  const form = useForm<AddDoctorFormValues>({
-    resolver: zodResolver(addDoctorFormSchema),
-    defaultValues: addDoctorFormValues
+const AddMedicine = () => {
+  const form = useForm<AddMedicineFormValues>({
+    resolver: zodResolver(addMedicineFormSchema),
+    defaultValues: addMedicineFormValues
   });
 
-  const [selectedHospital, setSelectedHospital] = useState<string>("");
-  const departmentOptions = useDepartmentOptions(selectedHospital);
-  const hospitalOptions = useHospitalOptions();
+  const [selectedHospital, setSelectedHospital] = useState<string | boolean>(
+    ""
+  );
 
-  const onSubmit: SubmitHandler<AddDoctorFormValues> = values => {
+  const hospitalOptions = hospitals.map(hospital => ({
+    value: hospital.hospitalName,
+    label: `${hospital.hospitalName} - ${hospital.state}, ${hospital.district}`
+  }));
+
+  const departmentOptions = useDepartmentOptions(selectedHospital);
+
+  const onSubmit: SubmitHandler<AddMedicineFormValues> = values => {
     console.log(values);
   };
 
@@ -53,9 +50,16 @@ const AddDoctor = () => {
     <FormWrapper
       form={form}
       onSubmit={onSubmit}
-      title="Add Doctor"
-      description="Please enter the details of the doctor."
+      title="Add Medicine"
+      description="Please enter the details of the medicine."
     >
+      <FormFieldInput
+        name="medicineName"
+        label="Medicine Name"
+        placeholder="Enter Medicine Name"
+        form={form}
+      />
+
       <FormFieldSelect
         name="hospitalName"
         label="Hospital Name"
@@ -64,6 +68,7 @@ const AddDoctor = () => {
         form={form}
         setStateFxn={setSelectedHospital}
       />
+
       <FormFieldSelect
         name="departmentName"
         label="Department Name"
@@ -76,14 +81,15 @@ const AddDoctor = () => {
         form={form}
         disabled={!selectedHospital}
       />
-      <FormFieldInput
-        name="doctorName"
-        label="Doctor Name"
-        placeholder="Enter Doctor's Name"
+
+      <FormFieldTextArea
+        name="description"
+        label="Description"
+        placeholder="Enter a brief description of the medicine"
         form={form}
       />
     </FormWrapper>
   );
 };
 
-export default AddDoctor;
+export default AddMedicine;

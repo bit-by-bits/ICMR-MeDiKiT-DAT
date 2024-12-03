@@ -29,6 +29,8 @@ import HospitalDataManagement from "./pages/hospital-data-management/base";
 import AddHospital from "./pages/hospital-data-management/add-hospital";
 import AddDepartment from "./pages/hospital-data-management/add-department";
 import AddDoctor from "./pages/hospital-data-management/add-doctor";
+import AddDisease from "./pages/hospital-data-management/add-disease";
+import AddMedicine from "./pages/hospital-data-management/add-medicine";
 // import Tests from "./pages/tests";
 import Labs from "./pages/labs";
 import RegisterPatient from "./pages/register-patient";
@@ -90,6 +92,14 @@ const createRoutes = () => [
       {
         path: URLs.app.hospitalDataManagement.addDoctor,
         element: <AddDoctor />
+      },
+      {
+        path: URLs.app.hospitalDataManagement.addDisease,
+        element: <AddDisease />
+      },
+      {
+        path: URLs.app.hospitalDataManagement.addMedicine,
+        element: <AddMedicine />
       },
       // {
       //   path: URLs.app.tests,

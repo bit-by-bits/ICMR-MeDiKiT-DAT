@@ -58,5 +58,65 @@
     "state": "Karnataka",
     "district": "Bangalore Urban",
     "pin": "560034"
+  },
+  {
+    "hospitalName": "Sri Ramachandra Medical Center",
+    "state": "Tamil Nadu",
+    "district": "Chennai",
+    "pin": "600116"
+  },
+  {
+    "hospitalName": "Jaypee Hospital",
+    "state": "Uttar Pradesh",
+    "district": "Noida",
+    "pin": "201307"
+  },
+  {
+    "hospitalName": "Manipal Hospital",
+    "state": "Karnataka",
+    "district": "Bangalore Urban",
+    "pin": "560038"
+  },
+  {
+    "hospitalName": "BLK Super Speciality Hospital",
+    "state": "Delhi",
+    "district": "Pusa Road",
+    "pin": "110005"
+  },
+  {
+    "hospitalName": "KIMS Hospitals",
+    "state": "Telangana",
+    "district": "Hyderabad",
+    "pin": "500062"
+  },
+  {
+    "hospitalName": "Shree Harsha Hospital",
+    "state": "Andhra Pradesh",
+    "district": "Visakhapatnam",
+    "pin": "530003"
+  },
+  {
+    "hospitalName": "Narayana Health",
+    "state": "Karnataka",
+    "district": "Bangalore Urban",
+    "pin": "560011"
+  },
+  {
+    "hospitalName": "Asian Institute of Medical Sciences",
+    "state": "Haryana",
+    "district": "Faridabad",
+    "pin": "121001"
+  },
+  {
+    "hospitalName": "Ruby Hall Clinic",
+    "state": "Maharashtra",
+    "district": "Pune",
+    "pin": "411001"
+  },
+  {
+    "hospitalName": "The Indraprastha Apollo Hospital",
+    "state": "Delhi",
+    "district": "Sarita Vihar",
+    "pin": "110076"
   }
 ]

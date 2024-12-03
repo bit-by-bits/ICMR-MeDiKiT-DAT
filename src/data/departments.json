@@ -4,39 +4,319 @@
     "departmentName": "Cardiology"
   },
   {
-    "hospitalName": "Fortis Healthcare",
+    "hospitalName": "Apollo Hospital",
     "departmentName": "Neurology"
+  },
+  {
+    "hospitalName": "Apollo Hospital",
+    "departmentName": "Orthopedics"
+  },
+  {
+    "hospitalName": "Apollo Hospital",
+    "departmentName": "Dermatology"
+  },
+  {
+    "hospitalName": "Fortis Healthcare",
+    "departmentName": "Cardiology"
+  },
+  {
+    "hospitalName": "Fortis Healthcare",
+    "departmentName": "Oncology"
+  },
+  {
+    "hospitalName": "Fortis Healthcare",
+    "departmentName": "Pediatrics"
+  },
+  {
+    "hospitalName": "Fortis Healthcare",
+    "departmentName": "Urology"
+  },
+  {
+    "hospitalName": "AIIMS",
+    "departmentName": "Cardiology"
   },
   {
     "hospitalName": "AIIMS",
     "departmentName": "Orthopedics"
   },
   {
-    "hospitalName": "Max Super Speciality",
-    "departmentName": "Pediatrics"
+    "hospitalName": "AIIMS",
+    "departmentName": "Nephrology"
   },
   {
-    "hospitalName": "Medanta Medicity",
+    "hospitalName": "AIIMS",
+    "departmentName": "Plastic Surgery"
+  },
+  {
+    "hospitalName": "Max Super Speciality",
+    "departmentName": "Urology"
+  },
+  {
+    "hospitalName": "Max Super Speciality",
+    "departmentName": "Neurology"
+  },
+  {
+    "hospitalName": "Max Super Speciality",
     "departmentName": "Gastroenterology"
   },
   {
+    "hospitalName": "Max Super Speciality",
+    "departmentName": "Pediatric Surgery"
+  },
+  {
+    "hospitalName": "Medanta Medicity",
+    "departmentName": "Cardiology"
+  },
+  {
+    "hospitalName": "Medanta Medicity",
+    "departmentName": "Orthopedics"
+  },
+  {
+    "hospitalName": "Medanta Medicity",
+    "departmentName": "Pulmonology"
+  },
+  {
+    "hospitalName": "Medanta Medicity",
+    "departmentName": "Nephrology"
+  },
+  {
     "hospitalName": "Care Hospital",
-    "departmentName": "Oncology"
+    "departmentName": "Trauma"
+  },
+  {
+    "hospitalName": "Care Hospital",
+    "departmentName": "Cardiology"
+  },
+  {
+    "hospitalName": "Care Hospital",
+    "departmentName": "Nephrology"
+  },
+  {
+    "hospitalName": "Care Hospital",
+    "departmentName": "Hepatology"
   },
   {
     "hospitalName": "Fortis La Femme",
     "departmentName": "Gynecology"
   },
   {
+    "hospitalName": "Fortis La Femme",
+    "departmentName": "Pediatrics"
+  },
+  {
+    "hospitalName": "Fortis La Femme",
+    "departmentName": "Obstetrics"
+  },
+  {
+    "hospitalName": "Fortis La Femme",
+    "departmentName": "Endocrinology"
+  },
+  {
     "hospitalName": "Kokilaben Dhirubhai Ambani Hospital",
-    "departmentName": "Opthalmology"
+    "departmentName": "Oncology"
+  },
+  {
+    "hospitalName": "Kokilaben Dhirubhai Ambani Hospital",
+    "departmentName": "Cardiology"
+  },
+  {
+    "hospitalName": "Kokilaben Dhirubhai Ambani Hospital",
+    "departmentName": "Neurology"
+  },
+  {
+    "hospitalName": "Kokilaben Dhirubhai Ambani Hospital",
+    "departmentName": "Rheumatology"
   },
   {
     "hospitalName": "Sankara Nethralaya",
-    "departmentName": "Eye Care"
+    "departmentName": "Ophthalmology"
+  },
+  {
+    "hospitalName": "Sankara Nethralaya",
+    "departmentName": "Retina"
+  },
+  {
+    "hospitalName": "Sankara Nethralaya",
+    "departmentName": "Glaucoma"
+  },
+  {
+    "hospitalName": "Sankara Nethralaya",
+    "departmentName": "Oculoplasty"
   },
   {
     "hospitalName": "St. John's Medical College Hospital",
-    "departmentName": "Radiology"
+    "departmentName": "Cardiology"
+  },
+  {
+    "hospitalName": "St. John's Medical College Hospital",
+    "departmentName": "Orthopedics"
+  },
+  {
+    "hospitalName": "St. John's Medical College Hospital",
+    "departmentName": "Emergency Medicine"
+  },
+  {
+    "hospitalName": "St. John's Medical College Hospital",
+    "departmentName": "Rheumatology"
+  },
+  {
+    "hospitalName": "Sri Ramachandra Medical Center",
+    "departmentName": "Orthopedics"
+  },
+  {
+    "hospitalName": "Sri Ramachandra Medical Center",
+    "departmentName": "Pediatrics"
+  },
+  {
+    "hospitalName": "Sri Ramachandra Medical Center",
+    "departmentName": "Oncology"
+  },
+  {
+    "hospitalName": "Sri Ramachandra Medical Center",
+    "departmentName": "Endocrinology"
+  },
+  {
+    "hospitalName": "Jaypee Hospital",
+    "departmentName": "Trauma"
+  },
+  {
+    "hospitalName": "Jaypee Hospital",
+    "departmentName": "Cardiology"
+  },
+  {
+    "hospitalName": "Jaypee Hospital",
+    "departmentName": "Nephrology"
+  },
+  {
+    "hospitalName": "Jaypee Hospital",
+    "departmentName": "Pulmonology"
+  },
+  {
+    "hospitalName": "Manipal Hospital",
+    "departmentName": "Cardiology"
+  },
+  {
+    "hospitalName": "Manipal Hospital",
+    "departmentName": "Orthopedics"
+  },
+  {
+    "hospitalName": "Manipal Hospital",
+    "departmentName": "Plastic Surgery"
+  },
+  {
+    "hospitalName": "Manipal Hospital",
+    "departmentName": "Neurosurgery"
+  },
+  {
+    "hospitalName": "BLK Super Speciality Hospital",
+    "departmentName": "Cardiology"
+  },
+  {
+    "hospitalName": "BLK Super Speciality Hospital",
+    "departmentName": "Neurology"
+  },
+  {
+    "hospitalName": "BLK Super Speciality Hospital",
+    "departmentName": "Gastroenterology"
+  },
+  {
+    "hospitalName": "BLK Super Speciality Hospital",
+    "departmentName": "Urology"
+  },
+  {
+    "hospitalName": "KIMS Hospitals",
+    "departmentName": "Cardiology"
+  },
+  {
+    "hospitalName": "KIMS Hospitals",
+    "departmentName": "Oncology"
+  },
+  {
+    "hospitalName": "KIMS Hospitals",
+    "departmentName": "Nephrology"
+  },
+  {
+    "hospitalName": "KIMS Hospitals",
+    "departmentName": "Gynecology"
+  },
+  {
+    "hospitalName": "Shree Harsha Hospital",
+    "departmentName": "Orthopedics"
+  },
+  {
+    "hospitalName": "Shree Harsha Hospital",
+    "departmentName": "Pediatrics"
+  },
+  {
+    "hospitalName": "Shree Harsha Hospital",
+    "departmentName": "Gynecology"
+  },
+  {
+    "hospitalName": "Shree Harsha Hospital",
+    "departmentName": "General Surgery"
+  },
+  {
+    "hospitalName": "Narayana Health",
+    "departmentName": "Cardiology"
+  },
+  {
+    "hospitalName": "Narayana Health",
+    "departmentName": "Orthopedics"
+  },
+  {
+    "hospitalName": "Narayana Health",
+    "departmentName": "Nephrology"
+  },
+  {
+    "hospitalName": "Narayana Health",
+    "departmentName": "Plastic Surgery"
+  },
+  {
+    "hospitalName": "Asian Institute of Medical Sciences",
+    "departmentName": "Cardiology"
+  },
+  {
+    "hospitalName": "Asian Institute of Medical Sciences",
+    "departmentName": "Orthopedics"
+  },
+  {
+    "hospitalName": "Asian Institute of Medical Sciences",
+    "departmentName": "Oncology"
+  },
+  {
+    "hospitalName": "Asian Institute of Medical Sciences",
+    "departmentName": "Plastic Surgery"
+  },
+  {
+    "hospitalName": "Ruby Hall Clinic",
+    "departmentName": "Cardiology"
+  },
+  {
+    "hospitalName": "Ruby Hall Clinic",
+    "departmentName": "Orthopedics"
+  },
+  {
+    "hospitalName": "Ruby Hall Clinic",
+    "departmentName": "Plastic Surgery"
+  },
+  {
+    "hospitalName": "Ruby Hall Clinic",
+    "departmentName": "Urology"
+  },
+  {
+    "hospitalName": "The Indraprastha Apollo Hospital",
+    "departmentName": "Cardiology"
+  },
+  {
+    "hospitalName": "The Indraprastha Apollo Hospital",
+    "departmentName": "Nephrology"
+  },
+  {
+    "hospitalName": "The Indraprastha Apollo Hospital",
+    "departmentName": "Oncology"
+  },
+  {
+    "hospitalName": "The Indraprastha Apollo Hospital",
+    "departmentName": "Plastic Surgery"
   }
 ]
