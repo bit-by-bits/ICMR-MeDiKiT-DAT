@@ -34,9 +34,7 @@ import AddMedicine from "./pages/hospital-data-management/add-medicine";
 import Tests from "./pages/tests";
 import Labs from "./pages/labs";
 import RegisterPatient from "./pages/register-patient";
-// import PatientConsultation from "./pages/patient-consultation";
-// import AdminHelp from "./pages/admin-help";
-// import PatientHelp from "./pages/patient-help";
+import AdminHelp from "./pages/admin-help";
 
 const createRoutes = () => [
   {
@@ -117,10 +115,10 @@ const createRoutes = () => [
       //   path: URLs.app.patientConsultation,
       //   element: <PatientConsultation />
       // },
-      // {
-      //   path: URLs.app.adminHelp,
-      //   element: <AdminHelp />
-      // },
+      {
+        path: URLs.app.adminHelp,
+        element: <AdminHelp />
+      },
       // {
       //   path: URLs.app.patientHelp,
       //   element: <PatientHelp />
