@@ -1,0 +1,62 @@
+[
+  {
+    "hospitalName": "Apollo Hospital",
+    "state": "Delhi",
+    "district": "Central Delhi",
+    "pin": "110001"
+  },
+  {
+    "hospitalName": "Fortis Healthcare",
+    "state": "Karnataka",
+    "district": "Bangalore Urban",
+    "pin": "560001"
+  },
+  {
+    "hospitalName": "AIIMS",
+    "state": "Delhi",
+    "district": "South Delhi",
+    "pin": "110029"
+  },
+  {
+    "hospitalName": "Max Super Speciality",
+    "state": "Maharashtra",
+    "district": "Mumbai City",
+    "pin": "400001"
+  },
+  {
+    "hospitalName": "Medanta Medicity",
+    "state": "Haryana",
+    "district": "Gurugram",
+    "pin": "122018"
+  },
+  {
+    "hospitalName": "Care Hospital",
+    "state": "Telangana",
+    "district": "Hyderabad",
+    "pin": "500062"
+  },
+  {
+    "hospitalName": "Fortis La Femme",
+    "state": "Punjab",
+    "district": "Ludhiana",
+    "pin": "141001"
+  },
+  {
+    "hospitalName": "Kokilaben Dhirubhai Ambani Hospital",
+    "state": "Maharashtra",
+    "district": "Mumbai Suburban",
+    "pin": "400053"
+  },
+  {
+    "hospitalName": "Sankara Nethralaya",
+    "state": "Tamil Nadu",
+    "district": "Chennai",
+    "pin": "600006"
+  },
+  {
+    "hospitalName": "St. John's Medical College Hospital",
+    "state": "Karnataka",
+    "district": "Bangalore Urban",
+    "pin": "560034"
+  }
+]

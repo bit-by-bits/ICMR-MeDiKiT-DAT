@@ -14,11 +14,13 @@ import {
   SelectValue
 } from "@/components/ui/select";
 
+type Option = string | { value: string; label: string };
+
 type FormFieldSelectProps<T extends FieldValues> = {
   name: Path<T>;
   label: string;
   placeholder: string;
-  options: string[];
+  options: Option[];
   form: UseFormReturn<T>;
   disabled?: boolean;
   setStateFxn?: (value: PathValue<T, Path<T>>) => void;
@@ -55,11 +57,18 @@ const FormFieldSelect = <T extends FieldValues>({
                 <SelectValue placeholder={placeholder} />
               </SelectTrigger>
               <SelectContent>
-                {options.map(option => (
-                  <SelectItem key={option} value={option}>
-                    {option}
-                  </SelectItem>
-                ))}
+                {options.map((option, index) => {
+                  const optionValue =
+                    typeof option === "string" ? option : option.value;
+                  const optionLabel =
+                    typeof option === "string" ? option : option.label;
+
+                  return (
+                    <SelectItem key={index} value={optionValue}>
+                      {optionLabel}
+                    </SelectItem>
+                  );
+                })}
               </SelectContent>
             </Select>
           </FormControl>

@@ -1,0 +1,42 @@
+[
+  {
+    "hospitalName": "Apollo Hospital",
+    "departmentName": "Cardiology"
+  },
+  {
+    "hospitalName": "Fortis Healthcare",
+    "departmentName": "Neurology"
+  },
+  {
+    "hospitalName": "AIIMS",
+    "departmentName": "Orthopedics"
+  },
+  {
+    "hospitalName": "Max Super Speciality",
+    "departmentName": "Pediatrics"
+  },
+  {
+    "hospitalName": "Medanta Medicity",
+    "departmentName": "Gastroenterology"
+  },
+  {
+    "hospitalName": "Care Hospital",
+    "departmentName": "Oncology"
+  },
+  {
+    "hospitalName": "Fortis La Femme",
+    "departmentName": "Gynecology"
+  },
+  {
+    "hospitalName": "Kokilaben Dhirubhai Ambani Hospital",
+    "departmentName": "Opthalmology"
+  },
+  {
+    "hospitalName": "Sankara Nethralaya",
+    "departmentName": "Eye Care"
+  },
+  {
+    "hospitalName": "St. John's Medical College Hospital",
+    "departmentName": "Radiology"
+  }
+]

@@ -23,6 +23,7 @@ import {
   HomeIcon,
   UsersIcon,
   FileTextIcon,
+  HospitalIcon,
   HelpCircleIcon
 } from "lucide-react";
 
@@ -52,12 +53,13 @@ const sidebarLinks: SidebarLink[] = [
   {
     key: "admin",
     text: "Admin",
-    icon: <FileTextIcon className="h-4 w-4" />,
+    icon: <FileTextIcon className="h-4 w-4" />, // Admin icon
     children: [
       {
         key: "hospital-data-management",
         text: "Hospital Data Management",
-        description: "View and manage data related to hospitals.",
+        description:
+          "Manage and add hospital-related data such as hospitals, departments, doctors, etc.",
         link: URLs.app.hospitalDataManagement.base
       },
       {
@@ -71,6 +73,43 @@ const sidebarLinks: SidebarLink[] = [
         text: "Labs",
         description: "View and edit information about laboratories.",
         link: URLs.app.labs
+      }
+    ]
+  },
+  {
+    key: "hospital",
+    text: "Hospital",
+    icon: <HospitalIcon className="h-4 w-4" />, // New icon for Hospital
+    children: [
+      {
+        key: "add-hospital",
+        text: "Add Hospital",
+        description: "Add new hospitals to the system.",
+        link: URLs.app.hospitalDataManagement.addHospital
+      },
+      {
+        key: "add-department",
+        text: "Add Department",
+        description: "Add new departments to a hospital.",
+        link: URLs.app.hospitalDataManagement.addDepartment
+      },
+      {
+        key: "add-doctor",
+        text: "Add Doctor",
+        description: "Add new doctors to the system.",
+        link: URLs.app.hospitalDataManagement.addDoctor
+      },
+      {
+        key: "add-disease",
+        text: "Add Disease",
+        description: "Add diseases to the system.",
+        link: URLs.app.hospitalDataManagement.addDisease
+      },
+      {
+        key: "add-medicine",
+        text: "Add Medicine",
+        description: "Add medicines to the hospital system.",
+        link: URLs.app.hospitalDataManagement.addMedicine
       }
     ]
   },

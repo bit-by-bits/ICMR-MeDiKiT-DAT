@@ -9,7 +9,8 @@ import { labFormSchema } from "@/lib/schema";
 import { useState, useMemo } from "react";
 import states from "@/data/states.json";
 import districts from "@/data/districts.json";
-import { labFormValues } from "@/data/default-form-values";
+import { labFormValues } from "@/lib/default-values";
+
 
 type LabFormValues = z.infer<typeof labFormSchema>;
 

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -9,7 +9,6 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
-import { URLs } from "@/routes";
 
 interface SearchBarProps {
   className?: string;
@@ -18,21 +17,17 @@ interface SearchBarProps {
 const SearchBar: React.FC<SearchBarProps> = ({ className }) => {
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [searchBy, setSearchBy] = useState<"name" | "id">("name");
-  const navigate = useNavigate();
   const location = useLocation();
 
   useEffect(() => {
-    if (location.pathname !== URLs.app.queries) {
-      setSearchTerm("");
-    }
+    setSearchTerm("");
   }, [location]);
 
   const handleSearch = (event: React.FormEvent) => {
     event.preventDefault();
 
     if (searchTerm.trim()) {
-      const searchQuery = `${searchBy}=${encodeURIComponent(searchTerm)}`;
-      // navigate(`${URLs.app.queries}?${searchQuery}`);
+      console.log(`Searching for ${searchBy} ${searchTerm}`);
     }
   };
 
