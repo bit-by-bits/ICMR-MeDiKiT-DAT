@@ -9,14 +9,22 @@ export const URLs = {
   app: {
     base: "/app",
     home: "/app/home",
-    hospitalDataManagement: "/app/hospital-data-management",
     tests: "/app/tests",
     labs: "/app/labs",
     registerPatient: "/app/register-patient",
     patientConsultation: "/app/patient-consultation",
     adminHelp: "/app/admin-help",
     patientHelp: "/app/patient-help",
-    settings: "/app/settings"
+    settings: "/app/settings",
+
+    hospitalDataManagement: {
+      base: "/app/hospital-data-management",
+      addHospital: "/app/hospital-data-management/add-hospital",
+      addDepartment: "/app/hospital-data-management/add-department",
+      addDoctor: "/app/hospital-data-management/add-doctor",
+      addDisease: "/app/hospital-data-management/add-disease",
+      addMedicine: "/app/hospital-data-management/add-medicine"
+    }
   },
   api: {
     base: "/api"

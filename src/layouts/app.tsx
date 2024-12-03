@@ -58,7 +58,7 @@ const sidebarLinks: SidebarLink[] = [
         key: "hospital-data-management",
         text: "Hospital Data Management",
         description: "View and manage data related to hospitals.",
-        link: URLs.app.hospitalDataManagement
+        link: URLs.app.hospitalDataManagement.base
       },
       {
         key: "tests",

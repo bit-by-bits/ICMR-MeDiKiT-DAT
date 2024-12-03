@@ -1,17 +1,17 @@
-import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm, SubmitHandler, UseFormReturn } from "react-hook-form";
+import { useForm, SubmitHandler } from "react-hook-form";
+import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
 import FormFieldInput from "@/components/form/form-field-input";
 import FormFieldSelect from "@/components/form/form-field-select";
-import { labFormSchema } from "@/lib/schema";
-import { useState, useMemo } from "react";
 import states from "@/data/states.json";
 import districts from "@/data/districts.json";
-import { labFormValues } from "@/data/default-form-values";
+import { addHospitalFormSchema } from "@/lib/schema";
+import { addHospitalFormValues } from "@/data/default-form-values";
+import { useState, useMemo } from "react";
 
-type LabFormValues = z.infer<typeof labFormSchema>;
+type AddHospitalFormValues = z.infer<typeof addHospitalFormSchema>;
 
 const useDistrictOptions = (selectedState: string) => {
   return useMemo(() => {
@@ -21,26 +21,24 @@ const useDistrictOptions = (selectedState: string) => {
   }, [selectedState]);
 };
 
-const Labs = () => {
-  const form: UseFormReturn<LabFormValues> = useForm<LabFormValues>({
-    resolver: zodResolver(labFormSchema),
-    defaultValues: labFormValues
+const AddHospital = () => {
+  const form = useForm<AddHospitalFormValues>({
+    resolver: zodResolver(addHospitalFormSchema),
+    defaultValues: addHospitalFormValues
   });
 
   const [selectedState, setSelectedState] = useState<string>("");
   const districtOptions = useDistrictOptions(selectedState);
 
-  const onSubmit: SubmitHandler<LabFormValues> = values => {
+  const onSubmit: SubmitHandler<AddHospitalFormValues> = values => {
     console.log(values);
   };
 
   return (
     <div className="flex flex-col space-y-6 bg-background">
-      <h1 className="text-4xl font-extrabold text-primary">
-        Add Laboratory Details
-      </h1>
+      <h1 className="text-4xl font-extrabold text-primary">Add Hospital</h1>
       <p className="text-lg text-muted-foreground">
-        Please enter the details of the hospital and laboratory.
+        Please enter the details of the hospital.
       </p>
 
       <Form {...form}>
@@ -51,12 +49,7 @@ const Labs = () => {
             placeholder="Enter Hospital Name"
             form={form}
           />
-          <FormFieldInput
-            name="laboratoryName"
-            label="Laboratory Name"
-            placeholder="Enter Laboratory Name"
-            form={form}
-          />
+
           <FormFieldSelect
             name="state"
             label="State"
@@ -65,6 +58,7 @@ const Labs = () => {
             form={form}
             setStateFxn={setSelectedState}
           />
+
           <FormFieldSelect
             name="district"
             label="District"
@@ -75,12 +69,14 @@ const Labs = () => {
             form={form}
             disabled={!selectedState}
           />
+
           <FormFieldInput
             name="pin"
             label="Pin"
             placeholder="Enter Pin (6 digits)"
             form={form}
           />
+
           <Button
             type="submit"
             className="px-6 py-3 bg-primary text-background hover:bg-primary/90"
@@ -93,4 +89,4 @@ const Labs = () => {
   );
 };
 
-export default Labs;
+export default AddHospital;

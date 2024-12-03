@@ -17,7 +17,7 @@ const Home = () => {
 
       <div className="space-x-4">
         <Button className="px-6 py-3 bg-primary text-background hover:bg-primary/90">
-          <Link to={URLs.app.hospitalDataManagement}>Go to Hospitals</Link>
+          <Link to={URLs.app.hospitalDataManagement.base}>Go to Hospitals</Link>
         </Button>
 
         <Button
