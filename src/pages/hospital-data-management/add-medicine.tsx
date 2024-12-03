@@ -1,29 +1,16 @@
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { addMedicineFormSchema } from "@/lib/schema";
-import { addMedicineFormValues } from "@/lib/default-values";
+import { addMedicineFormValues } from "@/lib/defaultValues";
 import FormWrapper from "@/components/form/form-wrapper";
 import FormFieldInput from "@/components/form/form-field-input";
 import FormFieldSelect from "@/components/form/form-field-select";
 import FormFieldTextArea from "@/components/form/form-field-textarea";
-import hospitals from "@/data/hospitals.json";
-import departments from "@/data/departments.json";
 import { z } from "zod";
+import { useDepartmentOptions, useHospitalOptions } from "@/lib/useOptions";
 
 type AddMedicineFormValues = z.infer<typeof addMedicineFormSchema>;
-
-const useDepartmentOptions = (selectedHospital: string | boolean) => {
-  return useMemo(() => {
-    if (!selectedHospital) return [];
-    return departments
-      .filter(department => department.hospitalName === selectedHospital)
-      .map(department => ({
-        value: department.departmentName,
-        label: department.departmentName
-      }));
-  }, [selectedHospital]);
-};
 
 const AddMedicine = () => {
   const form = useForm<AddMedicineFormValues>({
@@ -31,15 +18,9 @@ const AddMedicine = () => {
     defaultValues: addMedicineFormValues
   });
 
-  const [selectedHospital, setSelectedHospital] = useState<string | boolean>(
-    ""
-  );
+  const [selectedHospital, setSelectedHospital] = useState<string>("");
 
-  const hospitalOptions = hospitals.map(hospital => ({
-    value: hospital.hospitalName,
-    label: `${hospital.hospitalName} - ${hospital.state}, ${hospital.district}`
-  }));
-
+  const hospitalOptions = useHospitalOptions();
   const departmentOptions = useDepartmentOptions(selectedHospital);
 
   const onSubmit: SubmitHandler<AddMedicineFormValues> = values => {

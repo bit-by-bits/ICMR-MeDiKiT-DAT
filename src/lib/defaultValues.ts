@@ -46,3 +46,14 @@ export const addMedicineFormValues = createEmptyFormValues([
   "departmentName",
   "description"
 ]);
+
+export const addTestFormValues = createEmptyFormValues([
+  "hospitalId",
+  "labId",
+  "patientId",
+  "testType",
+  "testName",
+  "testDate",
+  "testResult",
+  "testFile"
+]);

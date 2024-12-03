@@ -1,11 +1,11 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { addDepartmentFormSchema } from "@/lib/schema";
-import { addDepartmentFormValues } from "@/lib/default-values";
+import { addDepartmentFormValues } from "@/lib/defaultValues";
 import FormWrapper from "@/components/form/form-wrapper";
 import FormFieldInput from "@/components/form/form-field-input";
 import FormFieldSelect from "@/components/form/form-field-select";
-import hospitals from "@/data/hospitals.json";
+import { useHospitalOptions } from "@/lib/useOptions";
 
 const AddDepartment = () => {
   const form = useForm({
@@ -13,14 +13,11 @@ const AddDepartment = () => {
     defaultValues: addDepartmentFormValues
   });
 
+  const hospitalOptions = useHospitalOptions();
+
   const onSubmit: SubmitHandler<typeof addDepartmentFormValues> = values => {
     console.log(values);
   };
-
-  const hospitalOptions = hospitals.map(hospital => ({
-    value: hospital.hospitalName,
-    label: `${hospital.hospitalName} - ${hospital.state}, ${hospital.district}`
-  }));
 
   return (
     <FormWrapper

@@ -66,15 +66,15 @@ const sidebarLinks: SidebarLink[] = [
       },
       {
         key: "tests",
-        text: "Tests Information",
-        description: "Add new and populate existing tests in the system.",
+        text: "Lab Tests",
+        description: "Add new lab test entries with relevant details and patient information to the system.",
         link: URLs.app.tests
       },
       {
         key: "labs",
         text: "Laboratories",
         description:
-          "Add new laboratories and manage existing ones in the system.",
+          "Add new laboratories to the system with associated hospital and location information.",
         link: URLs.app.labs
       }
     ]

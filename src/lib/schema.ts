@@ -64,3 +64,23 @@ export const addMedicineFormSchema = createFormSchema({
   departmentName: requiredNameSchema("Department Name"),
   description: descriptionSchema
 });
+
+export const addTestFormSchema = createFormSchema({
+  hospitalId: requiredNameSchema("Hospital"),
+  labId: requiredNameSchema("Laboratory"),
+  patientId: requiredNameSchema("Patient"),
+  testType: requiredNameSchema("Test Type"),
+  testName: nameSchema("Test Name"),
+  testDate: z.date().refine(val => val <= new Date(), {
+    message: "Test date must be in the past or today"
+  }),
+  testResult: z
+    .string()
+    .min(5, { message: "Test Result must be at least 5 characters" })
+    .max(500, { message: "Test Result must be less than 500 characters" }),
+  testFile: z
+    .instanceof(File, { message: "Test file must be a valid file" })
+    .refine(file => file.size <= 10 * 1024 * 1024, {
+      message: "File size must be less than 10MB"
+    })
+});

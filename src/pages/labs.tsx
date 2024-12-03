@@ -4,21 +4,12 @@ import { useForm, SubmitHandler, UseFormReturn } from "react-hook-form";
 import FormFieldInput from "@/components/form/form-field-input";
 import FormFieldSelect from "@/components/form/form-field-select";
 import { labFormSchema } from "@/lib/schema";
-import { useState, useMemo } from "react";
-import { labFormValues } from "@/lib/default-values";
-import states from "@/data/states.json";
-import districts from "@/data/districts.json";
+import { useState } from "react";
+import { labFormValues } from "@/lib/defaultValues";
 import FormWrapper from "@/components/form/form-wrapper";
+import { useDistrictOptions, useStateOptions } from "@/lib/useOptions";
 
 type LabFormValues = z.infer<typeof labFormSchema>;
-
-const useDistrictOptions = (selectedState: string) => {
-  return useMemo(() => {
-    return selectedState
-      ? districts[selectedState as keyof typeof districts] || []
-      : [];
-  }, [selectedState]);
-};
 
 const Labs = () => {
   const form: UseFormReturn<LabFormValues> = useForm<LabFormValues>({
@@ -27,6 +18,8 @@ const Labs = () => {
   });
 
   const [selectedState, setSelectedState] = useState<string>("");
+
+  const stateOptions = useStateOptions();
   const districtOptions = useDistrictOptions(selectedState);
 
   const onSubmit: SubmitHandler<LabFormValues> = values => {
@@ -56,7 +49,7 @@ const Labs = () => {
         name="state"
         label="State"
         placeholder="Select State"
-        options={states}
+        options={stateOptions}
         form={form}
         setStateFxn={setSelectedState}
       />

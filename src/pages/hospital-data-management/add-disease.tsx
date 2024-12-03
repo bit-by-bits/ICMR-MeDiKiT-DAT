@@ -1,7 +1,7 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { addDiseaseFormSchema } from "@/lib/schema";
-import { addDiseaseFormValues } from "@/lib/default-values";
+import { addDiseaseFormValues } from "@/lib/defaultValues";
 import FormWrapper from "@/components/form/form-wrapper";
 import FormFieldInput from "@/components/form/form-field-input";
 import FormFieldTextArea from "@/components/form/form-field-textarea";
