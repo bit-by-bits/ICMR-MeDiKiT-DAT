@@ -2,6 +2,7 @@
   "name": "icmr-medikit-dat",
   "private": true,
   "version": "0.0.0",
+  "description": "MeDiKiT is a project funded by Indian Council of Medical Research (ICMR). Funding ID: 2021-13255 (Adhoc Research Grant - 2021).",
   "type": "module",
   "scripts": {
     "dev": "vite",
