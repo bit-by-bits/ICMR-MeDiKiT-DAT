@@ -1,5 +1,19 @@
-import LinkButton from "@/components/hospital-data-management/link-button";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import { URLs } from "@/routes";
+
+type LinkButtonProps = {
+  to: string;
+  label: string;
+};
+
+const LinkButton = ({ to, label }: LinkButtonProps) => {
+  return (
+    <Button className="px-6 py-3 bg-primary text-background hover:bg-primary/90 w-full">
+      <Link to={to}>{label}</Link>
+    </Button>
+  );
+};
 
 export const description =
   "Hospital Data Management (HDM) page of the ICMR MeDiKiT-DAT app. It provides options for managing hospitals, departments, doctors, diseases, and medicines.";

@@ -87,4 +87,3 @@ const PatientHelp = () => {
 };
 
 export default PatientHelp;
-  

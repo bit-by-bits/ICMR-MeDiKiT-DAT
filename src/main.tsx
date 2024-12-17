@@ -11,13 +11,10 @@ import LoginImg from "./assets/login.jpeg";
 import { URLs } from "./routes";
 import { ThemeProvider } from "./context/ThemeContext/ThemeContextProvider";
 import { AuthProvider } from "./context/AuthContext/AuthContextProvider";
-import { FiltersProvider } from "./context/FilterContext/FiltersContextProvider";
 
-// Layouts
 import AppLayout from "./layouts/app";
 import AuthLayout from "./layouts/auth";
 
-// Pages
 import ErrorPage from "./pages/error";
 import UnavailablePage from "./pages/unavailabe";
 import Login from "./pages/login";
@@ -98,9 +95,7 @@ if (rootElement) {
     <StrictMode>
       <ThemeProvider>
         <AuthProvider>
-          <FiltersProvider>
-            <RouterProvider router={router} />
-          </FiltersProvider>
+          <RouterProvider router={router} />
         </AuthProvider>
       </ThemeProvider>
     </StrictMode>

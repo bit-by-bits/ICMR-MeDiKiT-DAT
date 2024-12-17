@@ -30,8 +30,8 @@ const AuthLayout = ({ coverImage }: AuthLayoutProps) => {
         <img
           src={coverImage}
           alt="Auth cover"
-          width="1920"
-          height="1080"
+          width={1920}
+          height={1080}
           className="min-h-full w-full object-cover object-right dark:brightness-[0.2] dark:grayscale"
         />
       </div>

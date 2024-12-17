@@ -7,7 +7,7 @@ export const description =
 
 const Home = () => {
   return (
-    <div className="flex flex-col items-center justify-center text-center space-y-6 bg-background min-h-[calc(100vh_-_theme(spacing.64))]">
+    <div className="flex flex-col items-center justify-center text-center space-y-6 bg-background min-h-[calc(100vh_-_theme(spacing.64))] px-4">
       <h1 className="text-4xl font-extrabold text-primary">
         Welcome to ICMR MeDiKiT-DAT
       </h1>
@@ -15,7 +15,7 @@ const Home = () => {
         A platform to manage your medical data with ease and accuracy.
       </p>
 
-      <div className="space-x-4">
+      <div className="flex space-x-4">
         <Button className="px-6 py-3 bg-primary text-background hover:bg-primary/90">
           <Link to={URLs.app.hospitalDataManagement.base}>Go to Hospitals</Link>
         </Button>
