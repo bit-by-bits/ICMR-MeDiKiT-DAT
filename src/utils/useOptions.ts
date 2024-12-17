@@ -4,6 +4,7 @@ import departments from "@/data/departments.json";
 import labs from "@/data/labs.json";
 import states from "@/data/states.json";
 import districts from "@/data/districts.json";
+import doctors from "@/data/doctors.json";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const mapToOptions = (data: any[], labelTemplate: (item: any) => string) => {
@@ -55,4 +56,29 @@ export const useDistrictOptions = (selectedState: string) => {
       ? districts[selectedState as keyof typeof districts] || []
       : [];
   }, [selectedState]);
+};
+
+export const useGenderOptions = () => {
+  const genderList = ["Male", "Female", "Other"];
+  return mapToOptions(genderList, gender => gender);
+};
+
+export const useDoctorOptions = (
+  selectedHospital: string,
+  selectedDepartment: string
+) => {
+  return useMemo(() => {
+    return selectedHospital && selectedDepartment
+      ? doctors
+          .filter(
+            doctor =>
+              doctor.hospitalName === selectedHospital &&
+              doctor.departmentName === selectedDepartment
+          )
+          .map(doctor => ({
+            value: doctor.doctorName,
+            label: doctor.doctorName
+          }))
+      : [];
+  }, [selectedHospital, selectedDepartment]);
 };

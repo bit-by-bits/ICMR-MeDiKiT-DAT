@@ -1,86 +1,114 @@
 import { z } from "zod";
 
-const nameSchema = (fieldName: string) =>
+const createStringSchema = (fieldName: string, min: number, max: number) =>
   z
     .string()
-    .min(3)
-    .max(100, {
-      message: `${fieldName} must be at least 3 characters and at most 100 characters`
+    .min(min, {
+      message: `${fieldName} must be at least ${min} characters long`
+    })
+    .max(max, {
+      message: `${fieldName} must be at most ${max} characters long`
     });
 
-const requiredNameSchema = (fieldName: string) =>
-  z.string().min(2, { message: `${fieldName} is required` });
+const createRequiredStringSchema = (fieldName: string, min: number) =>
+  z.string().min(min, {
+    message: `${fieldName} is required and must be at least ${min} characters`
+  });
 
 const pinSchema = z
   .string()
   .length(6, { message: "Pin must be exactly 6 digits" })
-  .regex(/^\d+$/, { message: "Pin must be numeric" });
+  .regex(/^\d+$/, { message: "Pin must contain only numeric values" });
 
-const descriptionSchema = z
-  .string()
-  .min(10, { message: "Description must be at least 10 characters" })
-  .max(500, { message: "Description must be less than 500 characters" });
+const descriptionSchema = createStringSchema("Description", 10, 500);
+const categorySchema = createRequiredStringSchema("Category", 3);
 
-const categorySchema = z.string().min(3, { message: "Category is required" });
+const fileSchema = z
+  .instanceof(File, { message: "Uploaded file must be valid" })
+  .refine(file => file.size <= 10 * 1024 * 1024, {
+    message: "File size must be less than 10MB"
+  });
+
+const dateSchema = (direction: "past" | "future", fieldName: string) =>
+  z
+    .date()
+    .refine(
+      val => (direction === "past" ? val <= new Date() : val >= new Date()),
+      {
+        message: `${fieldName} must be ${direction === "past" ? "in the past or today" : "today or later"}`
+      }
+    );
 
 const createFormSchema = (schema: Record<string, z.ZodTypeAny>) =>
   z.object(schema);
 
 export const labFormSchema = createFormSchema({
-  hospitalName: requiredNameSchema("Hospital Name"),
-  laboratoryName: requiredNameSchema("Laboratory Name"),
-  state: requiredNameSchema("State"),
-  district: requiredNameSchema("District"),
+  hospitalName: createRequiredStringSchema("Hospital Name", 2),
+  laboratoryName: createRequiredStringSchema("Laboratory Name", 2),
+  state: createRequiredStringSchema("State", 2),
+  district: createRequiredStringSchema("District", 2),
   pin: pinSchema
 });
 
-export const addHospitalFormSchema = createFormSchema({
-  hospitalName: requiredNameSchema("Hospital Name"),
-  state: requiredNameSchema("State"),
-  district: requiredNameSchema("District"),
-  pin: pinSchema
-});
+export const addHospitalFormSchema = labFormSchema;
 
 export const addDepartmentFormSchema = createFormSchema({
-  hospitalName: requiredNameSchema("Hospital Name"),
-  departmentName: requiredNameSchema("Department Name")
+  hospitalName: createRequiredStringSchema("Hospital Name", 2),
+  departmentName: createRequiredStringSchema("Department Name", 2)
 });
 
 export const addDoctorFormSchema = createFormSchema({
-  doctorName: nameSchema("Doctor Name"),
-  hospitalName: requiredNameSchema("Hospital Name"),
-  departmentName: requiredNameSchema("Department Name")
+  doctorName: createStringSchema("Doctor Name", 3, 100),
+  hospitalName: createRequiredStringSchema("Hospital Name", 2),
+  departmentName: createRequiredStringSchema("Department Name", 2)
 });
 
 export const addDiseaseFormSchema = createFormSchema({
-  diseaseName: nameSchema("Disease Name"),
+  diseaseName: createStringSchema("Disease Name", 3, 100),
   description: descriptionSchema,
   category: categorySchema
 });
 
 export const addMedicineFormSchema = createFormSchema({
-  medicineName: nameSchema("Medicine Name"),
-  hospitalName: requiredNameSchema("Hospital Name"),
-  departmentName: requiredNameSchema("Department Name"),
+  medicineName: createStringSchema("Medicine Name", 3, 100),
+  hospitalName: createRequiredStringSchema("Hospital Name", 2),
+  departmentName: createRequiredStringSchema("Department Name", 2),
   description: descriptionSchema
 });
 
 export const addTestFormSchema = createFormSchema({
-  hospitalId: requiredNameSchema("Hospital"),
-  labId: requiredNameSchema("Laboratory"),
-  patientId: requiredNameSchema("Patient"),
-  testType: requiredNameSchema("Test Type"),
-  testName: nameSchema("Test Name"),
-  testDate: z.date().refine(val => val <= new Date(), {
-    message: "Test date must be in the past or today"
-  }),
-  testResult: z
+  hospitalId: createRequiredStringSchema("Hospital", 2),
+  labId: createRequiredStringSchema("Laboratory", 2),
+  patientId: createRequiredStringSchema("Patient", 2),
+  testType: createRequiredStringSchema("Test Type", 2),
+  testName: createStringSchema("Test Name", 3, 100),
+  testDate: dateSchema("past", "Test Date"),
+  testResult: createStringSchema("Test Result", 5, 500),
+  testFile: fileSchema
+});
+
+export const registerPatientFormSchema = createFormSchema({
+  patientName: createStringSchema("Patient Name", 3, 100),
+  dateOfBirth: dateSchema("past", "Date of Birth"),
+  gender: createRequiredStringSchema("Gender", 1),
+  contactNumber: z
     .string()
-    .min(5, { message: "Test Result must be at least 5 characters" })
-    .max(500, { message: "Test Result must be less than 500 characters" }),
-  testFile: z
-    .instanceof(File, { message: "Test file must be a valid file" })
-    .refine(file => file.size <= 10 * 1024 * 1024, {
-      message: "File size must be less than 10MB"
-    })
+    .regex(/^\d{10}$/, { message: "Contact number must be exactly 10 digits" }),
+  address: createStringSchema("Address", 5, 100),
+  state: createRequiredStringSchema("State", 2),
+  district: createRequiredStringSchema("District", 2),
+  pin: pinSchema,
+  medicalHistory: z
+    .string()
+    .max(1000, { message: "Medical history cannot exceed 1000 characters" })
+    .optional()
+});
+
+export const bookConsultationFormSchema = createFormSchema({
+  hospitalName: createRequiredStringSchema("Hospital", 1),
+  departmentName: createRequiredStringSchema("Department", 1),
+  doctorName: createRequiredStringSchema("Doctor", 1),
+  patientName: createStringSchema("Patient Name", 3, 100),
+  consultationDate: dateSchema("future", "Consultation Date"),
+  description: descriptionSchema
 });
