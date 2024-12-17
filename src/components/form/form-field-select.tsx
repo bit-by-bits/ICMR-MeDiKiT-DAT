@@ -57,18 +57,24 @@ const FormFieldSelect = <T extends FieldValues>({
                 <SelectValue placeholder={placeholder} />
               </SelectTrigger>
               <SelectContent>
-                {options.map((option, index) => {
-                  const optionValue =
-                    typeof option === "string" ? option : option.value;
-                  const optionLabel =
-                    typeof option === "string" ? option : option.label;
+                {options.length === 0 ? (
+                  <SelectItem disabled value="no-options">
+                    No options available
+                  </SelectItem>
+                ) : (
+                  options.map((option, index) => {
+                    const optionValue =
+                      typeof option === "string" ? option : option.value;
+                    const optionLabel =
+                      typeof option === "string" ? option : option.label;
 
-                  return (
-                    <SelectItem key={index} value={optionValue}>
-                      {optionLabel}
-                    </SelectItem>
-                  );
-                })}
+                    return (
+                      <SelectItem key={index} value={optionValue}>
+                        {optionLabel}
+                      </SelectItem>
+                    );
+                  })
+                )}
               </SelectContent>
             </Select>
           </FormControl>

@@ -7,7 +7,9 @@ interface RouteError {
 }
 
 const ErrorDetails: React.FC<{ error: RouteError }> = ({ error }) => (
-  <p className="text-gray-500 italic">{error.statusText || error.message}</p>
+  <p className="text-gray-500 italic">
+    {error.statusText || error.message || "An unknown error occurred."}
+  </p>
 );
 
 export const description =
@@ -20,7 +22,7 @@ const ErrorPage = () => {
   return (
     <div
       id="error-page"
-      className="flex flex-col items-center justify-center h-screen w-screen text-center"
+      className="flex flex-col items-center justify-center h-screen w-screen text-center px-4"
     >
       <h1 className="text-4xl font-bold mb-4">Oops!</h1>
       <p className="mb-2">Sorry, an unexpected error has occurred.</p>

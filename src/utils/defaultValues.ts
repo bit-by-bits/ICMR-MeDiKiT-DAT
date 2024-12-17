@@ -1,15 +1,16 @@
-const createEmptyFormValues = <
-  T extends Record<string, string | number | null>
->(
-  fields: T
-): T => {
+type FormFields = Record<string, string | number | null>;
+
+const createEmptyFormValues = <T extends FormFields>(fields: T): T => {
   return Object.keys(fields).reduce((acc, field) => {
     acc[field as keyof T] = fields[field as keyof T];
     return acc;
   }, {} as T);
 };
 
-export const labFormValues = createEmptyFormValues({
+const createFormValues = <T extends FormFields>(fields: T) =>
+  createEmptyFormValues(fields);
+
+export const labFormValues = createFormValues({
   hospitalName: "",
   laboratoryName: "",
   state: "",
@@ -17,38 +18,38 @@ export const labFormValues = createEmptyFormValues({
   pin: ""
 });
 
-export const addHospitalFormValues = createEmptyFormValues({
+export const addHospitalFormValues = createFormValues({
   hospitalName: "",
   state: "",
   district: "",
   pin: ""
 });
 
-export const addDepartmentFormValues = createEmptyFormValues({
+export const addDepartmentFormValues = createFormValues({
   hospitalName: "",
   departmentName: ""
 });
 
-export const addDoctorFormValues = createEmptyFormValues({
+export const addDoctorFormValues = createFormValues({
   doctorName: "",
   hospitalName: "",
   departmentName: ""
 });
 
-export const addDiseaseFormValues = createEmptyFormValues({
+export const addDiseaseFormValues = createFormValues({
   diseaseName: "",
   description: "",
   category: ""
 });
 
-export const addMedicineFormValues = createEmptyFormValues({
+export const addMedicineFormValues = createFormValues({
   medicineName: "",
   hospitalName: "",
   departmentName: "",
   description: ""
 });
 
-export const addTestFormValues = createEmptyFormValues({
+export const addTestFormValues = createFormValues({
   hospitalId: "",
   labId: "",
   patientId: "",
@@ -59,7 +60,7 @@ export const addTestFormValues = createEmptyFormValues({
   testFile: null
 });
 
-export const registerPatientFormValues = createEmptyFormValues({
+export const registerPatientFormValues = createFormValues({
   patientName: "",
   dateOfBirth: null,
   gender: "",
@@ -71,7 +72,7 @@ export const registerPatientFormValues = createEmptyFormValues({
   medicalHistory: ""
 });
 
-export const bookConsultationFormValues = createEmptyFormValues({
+export const bookConsultationFormValues = createFormValues({
   hospitalName: "",
   departmentName: "",
   doctorName: "",

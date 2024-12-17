@@ -73,7 +73,6 @@ button:focus-visible {
   }
 }
 
-/* Custom Theme Variables */
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -131,7 +130,6 @@ button:focus-visible {
   }
 }
 
-/* General Utilities */
 @layer base {
   * {
     @apply border-border;

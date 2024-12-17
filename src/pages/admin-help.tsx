@@ -1,8 +1,6 @@
-import HelpStep from "@/components/help/help-step";
-import HelpWrapper from "@/components/help/help-wrapper";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import HelpTabsWrapper from "@/components/help/help-tabs-wrapper";
 
-const tabs = [
+const adminTabs = [
   {
     value: "add-doctor",
     title: "Add Doctor",
@@ -133,36 +131,12 @@ const tabs = [
 
 const AdminHelp = () => {
   return (
-    <Tabs defaultValue="add-doctor" className="w-full">
-      <TabsList className="flex space-x-4 bg-background p-4">
-        {tabs.map(tab => (
-          <TabsTrigger
-            className="bg-secondary text-primary font-semibold px-4 py-2 rounded"
-            value={tab.value}
-            key={tab.value}
-          >
-            {tab.title}
-          </TabsTrigger>
-        ))}
-      </TabsList>
-
-      {tabs.map(tab => (
-        <TabsContent value={tab.value} key={tab.value}>
-          <HelpWrapper
-            title={`Admin Help: How To ${tab.title}`}
-            description={`This guide explains the steps to add a new ${tab.title.toLowerCase()} to the system.`}
-          >
-            {tab.steps.map((step, index) => (
-              <HelpStep
-                key={index}
-                stepTitle={step.title}
-                stepDescription={step.description}
-              />
-            ))}
-          </HelpWrapper>
-        </TabsContent>
-      ))}
-    </Tabs>
+    <HelpTabsWrapper
+      tabs={adminTabs}
+      defaultValue="add-doctor"
+      wrapperTitle="Admin Help"
+      wrapperDescription="This guide explains the steps to add a new"
+    />
   );
 };
 

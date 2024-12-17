@@ -1,8 +1,7 @@
-export function capitalizeWord(str: string): string {
-  return str[0].toUpperCase() + str.slice(1);
-}
+export const capitalizeWord = (str: string): string =>
+  str.charAt(0).toUpperCase() + str.slice(1);
 
-export function isValidImageURL(url: string): boolean {
+export const isValidImageURL = (url: string): boolean => {
   const imageExtensions = /\.(jpg|jpeg|png|gif|bmp|webp|svg)$/i;
-  return imageExtensions.test(url) || /^(https?:\/\/.*)/.test(url);
-}
+  return imageExtensions.test(url) || /^https?:\/\/.*$/i.test(url);
+};

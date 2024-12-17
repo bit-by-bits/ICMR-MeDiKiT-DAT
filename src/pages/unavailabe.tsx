@@ -7,7 +7,7 @@ export const description =
 const UnavailablePage = () => (
   <div
     id="unavailable-page"
-    className="flex flex-col items-center justify-center h-full w-full text-center"
+    className="flex flex-col items-center justify-center h-full w-full text-center px-4"
   >
     <h1 className="text-4xl font-bold mb-4">Oops!</h1>
     <p className="mb-2">Sorry, this page is currently unavailable.</p>
